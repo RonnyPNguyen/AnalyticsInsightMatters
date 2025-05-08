@@ -1,10 +1,9 @@
-import Nav from "./Components/Nav";
-import Footer from "./Components/Footer";
+import Navbar from "./Components/Navbar";
 
 function App() {
 	return (
 		<>
-			<div></div>
+			<div className="text-red-700 text-5xl">This is the App</div>
 		</>
 	);
 }
