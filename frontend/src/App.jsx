@@ -4,7 +4,7 @@ import Footer from "./Components/Footer";
 function App() {
 	return (
 		<>
-			<Nav></Nav>;<Footer></Footer>
+			<div></div>
 		</>
 	);
 }
