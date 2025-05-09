@@ -1,4 +1,4 @@
-export function Listings() {
+function Listings() {
 	return (
 		<div>
 			<h1>Listings</h1>
@@ -6,3 +6,5 @@ export function Listings() {
 		</div>
 	);
 }
+
+export default Listings;

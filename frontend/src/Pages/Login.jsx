@@ -1,4 +1,4 @@
-export function Login() {
+function Login() {
 	return (
 		<div>
 			<h1>Login</h1>
@@ -6,3 +6,5 @@ export function Login() {
 		</div>
 	);
 }
+
+export default Login;
