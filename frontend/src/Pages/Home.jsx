@@ -1,9 +1,17 @@
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import BizListings from "../components/BizListings";
+import ViewAllOffer from "../components/ViewAllOffer";
+import Footer from "../components/Footer";
+
 function Home() {
 	return (
-		<div>
-			<h1>Home</h1>
-			<p>Welcome to the home page!</p>
-		</div>
+		<>
+			<h1> This is the Main APP</h1>
+			<Hero />
+			<BizListings />
+			<ViewAllOffer />
+		</>
 	);
 }
 
