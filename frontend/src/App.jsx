@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
 import About from "./pages/About";
+import Featured from "./components/Featured";
 
 import Home from "./pages/Home";
 import Listings from "./pages/Listings";
@@ -19,10 +20,7 @@ function App() {
 			<div>
 				<h2 className="text-indigo text-center text-3xl">Feature Business</h2>
 				<div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-					<Card></Card>
-					<Card></Card>
-					<Card></Card>
-					<Card></Card>
+					<Featured></Featured>
 				</div>
 			</div>
 			<Footer></Footer>
