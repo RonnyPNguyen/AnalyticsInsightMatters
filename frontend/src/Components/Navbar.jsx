@@ -29,7 +29,10 @@ const Navbar = () => {
 						</Link>
 					</div>
 					<div>
-						<a to="/" className="bg-green-500 text-white rounded-lg p-1 w-12">
+						<a
+							to="/login"
+							className="bg-green-500 text-white rounded-lg p-1 w-12"
+						>
 							Login
 						</a>
 					</div>

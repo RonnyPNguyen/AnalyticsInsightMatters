@@ -4,15 +4,18 @@ import BizListings from "../components/BizListings";
 import ViewAllOffer from "../components/ViewAllOffer";
 import Footer from "../components/Footer";
 
-function Home() {
+import React from "react";
+
+const HomePage = () => {
 	return (
-		<>
-			<h1> This is the Main APP</h1>
+		<div>
+			<Navbar />
 			<Hero />
 			<BizListings />
 			<ViewAllOffer />
-		</>
+			<Footer />
+		</div>
 	);
-}
+};
 
-export default Home;
+export default HomePage;

@@ -1,5 +1,5 @@
 import React from "react";
-import offers from "../../public/sampleData.json";
+import offers from "../data/sampleData.json";
 import BizListing from "./BizListing";
 
 const BizListings = () => {
