@@ -3,7 +3,9 @@ import React from "react";
 const AboutPage = () => {
 	return (
 		<div>
-			<h1>About Us</h1>
+			<section style={{ height: "100vh" }}>
+				<h1>About Us</h1>
+			</section>
 		</div>
 	);
 };

@@ -1,13 +1,14 @@
-import BizListings from "../components/BizListings";
+import BizListings from "../components/HomeCards";
 import React from "react";
 
 const ListingsPage = () => {
 	return (
-		<div>
-			<h1>Listings Page</h1>
-			<p>Explore our listings of various offers and services.</p>
-			<BizListings></BizListings>
-		</div>
+		<section className="h-screen">
+			<div>
+				<h1>Listings Page</h1>
+				<p>Explore our listings of various offers and services.</p>
+			</div>
+		</section>
 	);
 };
 

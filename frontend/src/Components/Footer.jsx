@@ -3,8 +3,10 @@ import React from "react";
 const Footer = () => {
 	return (
 		<div>
-			<div className="bg-gray-800 p-5 flex justify-center items-center">
-				<h1 className="text-red-700 text-2xl">This is a footer</h1>
+			<div className="h-16 flex justify-center items-center">
+				<p className="text-gray-500 text-sm">
+					© 2025 FinAlytic. All rights reserved.
+				</p>
 			</div>
 		</div>
 	);

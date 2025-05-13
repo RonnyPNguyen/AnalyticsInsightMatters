@@ -1,20 +1,17 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import BizListings from "../components/BizListings";
+import HomeCards from "../components/HomeCards";
 import ViewAllOffer from "../components/ViewAllOffer";
 import Footer from "../components/Footer";
 
-import React from "react";
-
 const HomePage = () => {
 	return (
-		<div>
-			<Navbar />
+		<section>
 			<Hero />
-			<BizListings />
-			<ViewAllOffer />
-			<Footer />
-		</div>
+			<div>
+				<HomeCards numberOfFeatured={5} />
+			</div>
+		</section>
 	);
 };
 
