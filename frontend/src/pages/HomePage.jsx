@@ -1,16 +1,15 @@
-import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import HomeCards from "../components/HomeCards";
+import FeaturedCards from "../components/FeaturedCards";
 import ViewAllOffer from "../components/ViewAllOffer";
-import Footer from "../components/Footer";
+import StakeHolderCards from "../components/StakeHolderCards";
 
 const HomePage = () => {
 	return (
 		<section>
 			<Hero />
-			<div>
-				<HomeCards numberOfFeatured={5} />
-			</div>
+			<StakeHolderCards />
+			<FeaturedCards numberOfFeatured={2} />
+			<ViewAllOffer />
 		</section>
 	);
 };
