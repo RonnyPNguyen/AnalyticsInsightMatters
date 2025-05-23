@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap");
+
 @import "tailwindcss";
 
 @theme {
@@ -9,6 +10,15 @@
 	--font-coralpixels: "Coral Pixels", sans-serif;
 	--font-pixelsans: "Pixelify Sans", sans-serif;
 	--font-inter: "Inter", sans-serif;
+	--color-mountbatten-pink: #9d7498ff;
+	--color-salmon-pink: #f2a09fff;
+	--color-rich-black: #0e0b1a;
+	--color-space-cadet: #1e2044ff;
+	--color-licorice: #1d101cff;
+}
+
+.root {
+	font-family: "Inter", sans-serif;
 }
 
 .diagonal-gradient {

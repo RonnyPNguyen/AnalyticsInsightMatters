@@ -8,7 +8,7 @@ const HomePage = () => {
 		<section>
 			<Hero />
 			<StakeHolderCards />
-			<FeaturedCards numberOfFeatured={2} />
+			<FeaturedCards numberOfFeatured={4} />
 			<ViewAllOffer />
 		</section>
 	);

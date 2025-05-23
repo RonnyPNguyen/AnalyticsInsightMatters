@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "@tailwindcss/vite": "^4.1.5",
+    "react-spinner": "^0.2.7",
+    "react-spinners": "^0.17.0",
     "tailwindcss": "^4.1.5"
   }
 }
