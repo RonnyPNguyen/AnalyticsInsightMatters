@@ -227,17 +227,14 @@ function calculateFormula(data, market, retail) {
 	const ProfitMargin = TotalNetProfit / TotalRevenue;
 	const TotalDCF = DCF1 + DCF2 + DCF3 + DCF4 + DCF5;
 	const NPV = TotalDCF - TotalInvestment;
+	const CashFlowCAGR = (NetOCF5 / NetOCF1) ** (1 / 5) - 1;
 	const valueEstimation = NPV / AskingPrice;
 	const valueVerdict =
-		valueEstimation > 0.2
-			? "Excellent Deal"
-			: valueEstimation > 0.05
-			? "Good Value"
-			: valueEstimation > -0.05
-			? "Fair Value"
-			: valueEstimation > -0.2
-			? "Poor Value"
-			: "Overestimated";
+		valueEstimation > 0.1
+			? "Undervalued"
+			: valueEstimation > -0.1
+			? "Fair Deal"
+			: "Overvalued";
 	const url = data.URL;
 	return {
 		id,

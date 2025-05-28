@@ -2,10 +2,12 @@ import { useState } from "react";
 import { useParams, useLoaderData, Link } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Formula from "../components/Formula";
-import Graph from "../components/Graph";
 import { BsCircleFill } from "react-icons/bs";
 import ViewAllOffer from "../components/ViewAllOffer";
 import FullWorkSheet from "../components/FullWorkSheet";
+import GraphBusinessModel from "../components/GraphBusinessModel";
+import GraphValuation from "../components/GraphValuation";
+import GraphDiscountedCF from "../components/GraphDiscountedCF";
 
 const ListingPage = () => {
 	const [data, setData] = useState(null);
@@ -135,7 +137,19 @@ const ListingPage = () => {
 							</p>
 						</div>
 					</div>
-					<Graph data={data} />
+					<GraphBusinessModel data={data} />
+					<div className="font-mono grid grid-cols-2 sm:grid-cols-4 gap-4 py-2">
+						<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
+							<p className="text-xl">{formatPercent(data.GR)}</p>
+							<p className="text-xs text-green-500">Industry Growth Rate</p>
+						</div>
+						<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
+							<p className="text-xl">{formatPercent(data.RRR)}</p>
+							<p className="text-xs text-red-500">Required Return Rate</p>
+						</div>
+					</div>
+					<GraphDiscountedCF data={data} />
+					<GraphValuation data={data} />
 				</div>
 			) : (
 				<p className="text-xs italic text-gray-400">
