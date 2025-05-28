@@ -1,55 +1,51 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+import { Transition } from "@headlessui/react";
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const linkClass = ({ isActive }) =>
+		isActive
+			? "bg-white text-black rounded-2xl p-2 w-25 hover:scale-105 transition duration-300"
+			: "hover:bg-white hover:text-black rounded-2xl p-2 w-25 transition hover:scale-105 duration-300";
 	return (
 		<>
 			<nav className="sticky top-0 z-10">
-				<div className="px-8 py-2 flex justify-between items-center bg-black/60 backdrop-blur-lg">
+				<div className="h-16 px-8 flex justify-between items-center bg-black/60 backdrop-blur-lg">
 					<div className="w-40">
-						<Link
+						<NavLink
 							to="/"
 							className="flex items-center space-x-2 transition duration-300"
 						>
 							<h1 className="text-white text-3xl font-coralpixels">
 								FinAlytics
 							</h1>
-						</Link>
+						</NavLink>
 					</div>
-					<div className="hidden sm:flex sm:space-x-4 md:space-x-8 lg:space-x-12 font-mont text-white text-base font-light text-center">
-						<Link
-							to="/"
-							className="hover:bg-white hover:text-black rounded-2xl p-2 w-25 hover:scale-105 transition duration-300"
-						>
+					<div className="hidden md:flex sm:space-x-4 md:space-x-8 lg:space-x-12 font-mont text-white text-base font-light text-center">
+						<NavLink to="/" className={linkClass}>
 							Home
-						</Link>
-						<Link
-							to="/listings"
-							className="hover:bg-white hover:text-black rounded-2xl p-2 w-25 transition hover:scale-105 duration-300"
-						>
+						</NavLink>
+						<NavLink to="/listings" className={linkClass}>
 							Listings
-						</Link>
-						<Link
-							to="/about"
-							className="hover:bg-white hover:text-black rounded-2xl p-2 w-25 hover:scale-105 transition duration-300"
-						>
+						</NavLink>
+						<NavLink to="/about" className={linkClass}>
 							About
-						</Link>
+						</NavLink>
 					</div>
-					<div className="hidden sm:flex w-40 h-8 justify-end items-center text-white text-base font-light font-mont">
+					<div className="hidden md:flex w-40 h-8 justify-end items-center text-white text-base font-light font-mont">
 						<div className="diagonal-gradient p-[2px] rounded-full w-fit transition duration-300">
-							<Link
+							<NavLink
 								to="/login"
 								className="block bg-black rounded-full px-6 py-1 transition duration-300 hover:bg-transparent sm:px-3 hover:scale-105"
 							>
 								Log In
-							</Link>
+							</NavLink>
 						</div>
 					</div>
 
-					<div className="sm:hidden">
+					<div className="md:hidden">
 						<button
 							onClick={() => setIsOpen(!isOpen)}
 							className="text-white text-2xl hover:cursor-pointer hover:scale-105 transition duration-300"
@@ -60,40 +56,48 @@ const Navbar = () => {
 				</div>
 			</nav>
 
-			{isOpen && (
-				<div className="sm:hidden bg-black px-8 py-4 space-y-4 font-mont text-white text-base font-light transition duration-300">
-					<Link
+			<Transition
+				show={isOpen}
+				enter="transition duration-300 ease-out"
+				enterFrom="opacity-0 -translate-y-2"
+				enterTo="opacity-100 translate-y-0"
+				leave="transition duration-200 ease-in"
+				leaveFrom="opacity-100 translate-y-0"
+				leaveTo="opacity-0 -translate-y-2"
+			>
+				<div className="fixed top-16 left-0 w-full z-50 md:hidden bg-black px-8 py-4 space-y-4 font-mont text-white text-base font-light">
+					<NavLink
 						to="/"
 						className="block hover:bg-white hover:text-black rounded-2xl px-4 py-2 transition duration-300"
-						onClick={() => setIsOpen(!isOpen)}
+						onClick={() => setIsOpen(false)}
 					>
 						Home
-					</Link>
-					<Link
+					</NavLink>
+					<NavLink
 						to="/listings"
 						className="block hover:bg-white hover:text-black rounded-2xl px-4 py-2 transition duration-300"
-						onClick={() => setIsOpen(!isOpen)}
+						onClick={() => setIsOpen(false)}
 					>
 						Listings
-					</Link>
-					<Link
+					</NavLink>
+					<NavLink
 						to="/about"
 						className="block hover:bg-white hover:text-black rounded-2xl px-4 py-2 transition duration-300"
-						onClick={() => setIsOpen(!isOpen)}
+						onClick={() => setIsOpen(false)}
 					>
 						About
-					</Link>
+					</NavLink>
 					<div className="block bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 rounded-full py-[3px] px-[3px] text-center font-base">
-						<Link
+						<NavLink
 							to="/login"
 							className="block bg-black rounded-full transition duration-300 hover:bg-transparent p-2"
-							onClick={() => setIsOpen(!isOpen)}
+							onClick={() => setIsOpen(false)}
 						>
 							Log In
-						</Link>
+						</NavLink>
 					</div>
 				</div>
-			)}
+			</Transition>
 		</>
 	);
 };

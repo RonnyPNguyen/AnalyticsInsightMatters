@@ -1,15 +1,16 @@
-import { Link } from "react-router-dom";
-import market from "../data/marketData.json";
+import CardDetails from "./CardDetails";
+import { useEffect, useState } from "react";
 
-import Formula from "./Formula";
-import TestFormula from "./TestFormula";
-
-const Card = ({ offer }) => {
+const Card = ({ offer, className = "" }) => {
 	return (
-		<div className="bg-white h-100 flex flex-row">
-			<Formula className="h-full" b={offer} market={market}></Formula>
-			<div className="h-full bg-blue-500 ">
-				<img src="" alt="" />
+		<div
+			className={`flex flex-col flex-row w-full font-inter text-white ${className} bg-[#111111] hover:scale-102 transition-transform duration-200 ease-in-out rounded-xl overflow-hidden hover:ring-2`}
+		>
+			<div className="w-full w-5/8 p-4">
+				<CardDetails offer={offer} />
+			</div>
+			<div className="hidden lg:flex lg:w-3/8">
+				<img src="/cafe.webp" alt="Preview" className="object-cover" />
 			</div>
 		</div>
 	);

@@ -1,0 +1,1720 @@
+{
+	"offers": [
+		{
+			"id": "20250001",
+			"BusinessName": "Gotcha Fresh Tea",
+			"Suburb": "Eastern Creeks",
+			"State": "New South Wales",
+			"Postcode": 2766.0,
+			"Industry": "Cafes, restaurants and takeaway food services",
+			"AskingPrice": 240000.0,
+			"StatedSAV": 0.0,
+			"Revenue": 547752.0,
+			"Outgoings": 231960.0,
+			"Wages": 0.0,
+			"Rent": 89724.0,
+			"StatedNetProfit": 226068.0,
+			"EmploymentType": 1.0,
+			"GSTIncluded": 1.0,
+			"SAVIncluded": 0.0,
+			"RentGrowthIncluded": 1.0,
+			"RentGrowth": 0.04,
+			"BusinessType": "Small Business",
+			"SGA": 0.0,
+			"TradingDays": 7.0,
+			"ListingStatus": 1.0,
+			"SoldPrice": 0.0,
+			"URL": "https://www.seekbusiness.com.au/business-listing/gotcha-fresh-tea-at-eastern-creeks-quarter-shopping-center/735018",
+			"DateAdded": 1736035200000
+		},
+		{
+			"id": "20250002",
+			"BusinessName": "Deluca Coffee",
+			"Suburb": "Bondi",
+			"State": "New South Wales",
+			"Postcode": 2026.0,
+			"Industry": "Cafes, restaurants and takeaway food services",
+			"AskingPrice": 75000.0,
+			"StatedSAV": 0.0,
+			"Revenue": 243000.0,
+			"Outgoings": 49800.0,
+			"Wages": 0.0,
+			"Rent": 51996.0,
+			"StatedNetProfit": 140112.0,
+			"EmploymentType": 1.0,
+			"GSTIncluded": 1.0,
+			"SAVIncluded": 0.0,
+			"RentGrowthIncluded": 0.0,
+			"RentGrowth": 0.0,
+			"BusinessType": "Small Business",
+			"SGA": 0.0,
+			"TradingDays": 7.0,
+			"ListingStatus": 1.0,
+			"SoldPrice": 0.0,
+			"URL": "https://www.seekbusiness.com.au/business-listing/popular-cafe-on-bondi-rd-for-sale-a-local-favorite/730573",
+			"DateAdded": 1736121600000
+		},
+		{
+			"id": "20250003",
+			"BusinessName": "Restaurant West",
+			"Suburb": "Harris Park",
+			"State": "New South Wales",
+			"Postcode": 2150.0,
+			"Industry": "Cafes, restaurants and catering services",
+			"AskingPrice": 300000.0,
+			"StatedSAV": 0.0,
+			"Revenue": 936000.0,
+			"Outgoings": 412412.0,
+			"Wages": 130000.0,
+			"Rent": 237588.0,
+			"StatedNetProfit": 156000.0,
+			"EmploymentType": 2.0,
+			"GSTIncluded": 1.0,
+			"SAVIncluded": 1.0,
+			"RentGrowthIncluded": 0.0,
+			"RentGrowth": 0.0,
+			"BusinessType": "Medium Business",
+			"SGA": 0.0,
+			"TradingDays": 7.0,
+			"ListingStatus": 1.0,
+			"SoldPrice": 0.0,
+			"URL": "https://www.seekbusiness.com.au/business-listing/ref-2933-restaurant-west/735856",
+			"DateAdded": 1736208000000
+		},
+		{
+			"id": "20250004",
+			"BusinessName": "Bakery Cafe Inner West",
+			"Suburb": "Balmain",
+			"State": "New South Wales",
+			"Postcode": 2041.0,
+			"Industry": "Cafes, restaurants and catering services",
+			"AskingPrice": 100000.0,
+			"StatedSAV": 0.0,
+			"Revenue": 228000.0,
+			"Outgoings": 90000.0,
+			"Wages": 54000.0,
+			"Rent": 36000.0,
+			"StatedNetProfit": 48000.0,
+			"EmploymentType": 2.0,
+			"GSTIncluded": 1.0,
+			"SAVIncluded": 0.0,
+			"RentGrowthIncluded": 0.0,
+			"RentGrowth": 0.0,
+			"BusinessType": "Small Business",
+			"SGA": 0.0,
+			"TradingDays": 7.0,
+			"ListingStatus": 1.0,
+			"SoldPrice": 0.0,
+			"URL": "https://www.seekbusiness.com.au/business-listing/ref-2865-bakery-cafe-inner-west/735849",
+			"DateAdded": 1736294400000
+		},
+		{
+			"id": "20250005",
+			"BusinessName": "Espresso Bar Inner West",
+			"Suburb": "Haberfield",
+			"State": "New South Wales",
+			"Postcode": 2045.0,
+			"Industry": "Cafes, restaurants and catering services",
+			"AskingPrice": 170000.0,
+			"StatedSAV": 0.0,
+			"Revenue": 468000.0,
+			"Outgoings": 137696.0,
+			"Wages": 145600.0,
+			"Rent": 54704.0,
+			"StatedNetProfit": 130000.0,
+			"EmploymentType": 2.0,
+			"GSTIncluded": 1.0,
+			"SAVIncluded": 0.0,
+			"RentGrowthIncluded": 0.0,
+			"RentGrowth": 0.0,
+			"BusinessType": "Small Business",
+			"SGA": 0.0,
+			"TradingDays": 7.0,
+			"ListingStatus": 1.0,
+			"SoldPrice": 0.0,
+			"URL": "https://www.seekbusiness.com.au/business-listing/ref-2894-price-drop-espresso-bar-no-cooking-inner-west/735850",
+			"DateAdded": 1736380800000
+		},
+		{
+			"id": "20250006",
+			"BusinessName": "Cafe Northern Beaches",
+			"Suburb": "Dee Why",
+			"State": "New South Wales",
+			"Postcode": 2099.0,
+			"Industry": "Cafes, restaurants and catering services",
+			"AskingPrice": 184000.0,
+			"StatedSAV": 0.0,
+			"Revenue": 624000.0,
+			"Outgoings": 185296.0,
+			"Wages": 208000.0,
+			"Rent": 89040.0,
+			"StatedNetProfit": 130000.0,
+			"EmploymentType": 2.0,
+			"GSTIncluded": 1.0,
+			"SAVIncluded": 1.0,
+			"RentGrowthIncluded": 0.0,
+			"RentGrowth": 0.0,
+			"BusinessType": "Small Business",
+			"SGA": 0.0,
+			"TradingDays": 7.0,
+			"ListingStatus": 1.0,
+			"SoldPrice": 0.0,
+			"URL": "https://www.seekbusiness.com.au/business-listing/ref-2860-cafe-northern-beaches/735848",
+			"DateAdded": 1736467200000
+		},
+		{
+			"id": "20250007",
+			"BusinessName": "Thai Restaurant",
+			"Suburb": "Kellyville",
+			"State": "New South Wales",
+			"Postcode": 2155.0,
+			"Industry": "Cafes, restaurants and catering services",
+			"AskingPrice": 870000.0,
+			"StatedSAV": 0.0,
+			"Revenue": 1820000.0,
+			"Outgoings": 624000.0,
+			"Wages": 520000.0,
+			"Rent": 156000.0,
+			"StatedNetProfit": 520000.0,
+			"EmploymentType": 2.0,
+			"GSTIncluded": 1.0,
+			"SAVIncluded": 1.0,
+			"RentGrowthIncluded": 0.0,
+			"RentGrowth": 0.0,
+			"BusinessType": "Medium Business",
+			"SGA": 0.0,
+			"TradingDays": 7.0,
+			"ListingStatus": 1.0,
+			"SoldPrice": 0.0,
+			"URL": "https://www.seekbusiness.com.au/business-listing/ref-3063-thai-restaurant-hills-area/739173",
+			"DateAdded": 1736553600000
+		}
+	],
+	"market": [
+		{ "id": "Required Return Rate", "value": 0.1 },
+		{ "id": "Industry Growth Rate", "value": 0.05 },
+		{ "id": "Interest Rate", "value": 0.075 },
+		{ "id": "CPI Index", "value": 0.024 },
+		{ "id": "Wage Index", "value": 0.032 },
+		{ "id": "Region Rent Growth Rate", "value": 0.03 },
+		{ "id": "Taxes", "value": 0.25 },
+		{ "id": "GST", "value": 0.1 },
+		{ "id": "Transfer and Set-up Fee", "value": 0.1 },
+		{ "id": "LTV Ratio", "value": 0.8 },
+		{ "id": "Industry ITR", "value": 6 }
+	],
+	"retail": [
+		{
+			"State": "New South Wales",
+			"Industry": "Supermarket and grocery stores",
+			"Turnover Rate": 0.0058726182,
+			"Retail Trade": "Supermarket and grocery stores",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "New South Wales",
+			"Industry": "Liquor retailing",
+			"Turnover Rate": 0.0274578516,
+			"Retail Trade": "Liquor retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "New South Wales",
+			"Industry": "Other specialised food retailing",
+			"Turnover Rate": 0.0123983342,
+			"Retail Trade": "Other specialised food retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "New South Wales",
+			"Industry": "Food retailing",
+			"Turnover Rate": 0.0075401628,
+			"Retail Trade": "Food retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "New South Wales",
+			"Industry": "Furniture, floor coverings, houseware and textile goods retailing",
+			"Turnover Rate": 0.0118684702,
+			"Retail Trade": "Furniture, floor coverings, houseware and textile goods retailing",
+			"Title": "Department Manager",
+			"Salary": 80000.0
+		},
+		{
+			"State": "New South Wales",
+			"Industry": "Electrical and electronic goods retailing",
+			"Turnover Rate": 0.0137479049,
+			"Retail Trade": "Electrical and electronic goods retailing",
+			"Title": "Department Manager",
+			"Salary": 80000.0
+		},
+		{
+			"State": "New South Wales",
+			"Industry": "Hardware, building and garden supplies retailing",
+			"Turnover Rate": 0.0074183172,
+			"Retail Trade": "Hardware, building and garden supplies retailing",
+			"Title": "Department Manager",
+			"Salary": 80000.0
+		},
+		{
+			"State": "New South Wales",
+			"Industry": "Household goods retailing",
+			"Turnover Rate": 0.0088666607,
+			"Retail Trade": "Household goods retailing",
+			"Title": "Department Manager",
+			"Salary": 80000.0
+		},
+		{
+			"State": "New South Wales",
+			"Industry": "Clothing retailing",
+			"Turnover Rate": 0.0452327359,
+			"Retail Trade": "Clothing retailing",
+			"Title": "Department Manager",
+			"Salary": 80000.0
+		},
+		{
+			"State": "New South Wales",
+			"Industry": "Footwear and other personal accessory retailing",
+			"Turnover Rate": 0.0360080018,
+			"Retail Trade": "Footwear and other personal accessory retailing",
+			"Title": "Department Manager",
+			"Salary": 80000.0
+		},
+		{
+			"State": "New South Wales",
+			"Industry": "Clothing, footwear and personal accessory retailing",
+			"Turnover Rate": 0.0410342068,
+			"Retail Trade": "Clothing, footwear and personal accessory retailing",
+			"Title": "Boutique Manager",
+			"Salary": 80000.0
+		},
+		{
+			"State": "New South Wales",
+			"Industry": "Department stores",
+			"Turnover Rate": 0.0377430308,
+			"Retail Trade": "Department stores",
+			"Title": "Department Manager",
+			"Salary": 80000.0
+		},
+		{
+			"State": "New South Wales",
+			"Industry": "Newspaper and book retailing",
+			"Turnover Rate": 0.0050608233,
+			"Retail Trade": "Newspaper and book retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "New South Wales",
+			"Industry": "Other recreational goods retailing",
+			"Turnover Rate": 0.0263433517,
+			"Retail Trade": "Other recreational goods retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "New South Wales",
+			"Industry": "Pharmaceutical, cosmetic and toiletry goods retailing",
+			"Turnover Rate": 0.0142920142,
+			"Retail Trade": "Pharmaceutical, cosmetic and toiletry goods retailing",
+			"Title": "Pharmacist in Charge",
+			"Salary": 122500.0
+		},
+		{
+			"State": "New South Wales",
+			"Industry": "Other retailing n.e.c.",
+			"Turnover Rate": 0.0117855617,
+			"Retail Trade": "Other retailing n.e.c.",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "New South Wales",
+			"Industry": "Other retailing",
+			"Turnover Rate": 0.0119903215,
+			"Retail Trade": "Other retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "New South Wales",
+			"Industry": "Cafes, restaurants and catering services",
+			"Turnover Rate": 0.0203512245,
+			"Retail Trade": "Cafes, restaurants and catering services",
+			"Title": "Restaurant Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "New South Wales",
+			"Industry": "Takeaway food services",
+			"Turnover Rate": 0.0044923039,
+			"Retail Trade": "Takeaway food services",
+			"Title": "Caf\u00e9 Manager",
+			"Salary": 73250.0
+		},
+		{
+			"State": "New South Wales",
+			"Industry": "Cafes, restaurants and takeaway food services",
+			"Turnover Rate": 0.0115061787,
+			"Retail Trade": "Cafes, restaurants and takeaway food services",
+			"Title": "Caf\u00e9 Manager",
+			"Salary": 73250.0
+		},
+		{
+			"State": "New South Wales",
+			"Industry": "Total (Industry)",
+			"Turnover Rate": 0.0096434727,
+			"Retail Trade": "Total (Industry)",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Victoria",
+			"Industry": "Supermarket and grocery stores",
+			"Turnover Rate": 0.0059218355,
+			"Retail Trade": "Supermarket and grocery stores",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Victoria",
+			"Industry": "Liquor retailing",
+			"Turnover Rate": 0.0280302215,
+			"Retail Trade": "Liquor retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Victoria",
+			"Industry": "Other specialised food retailing",
+			"Turnover Rate": 0.010083304,
+			"Retail Trade": "Other specialised food retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Victoria",
+			"Industry": "Food retailing",
+			"Turnover Rate": 0.0072981017,
+			"Retail Trade": "Food retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Victoria",
+			"Industry": "Furniture, floor coverings, houseware and textile goods retailing",
+			"Turnover Rate": 0.0165378851,
+			"Retail Trade": "Furniture, floor coverings, houseware and textile goods retailing",
+			"Title": "Department Manager",
+			"Salary": 69250.0
+		},
+		{
+			"State": "Victoria",
+			"Industry": "Electrical and electronic goods retailing",
+			"Turnover Rate": 0.0235578178,
+			"Retail Trade": "Electrical and electronic goods retailing",
+			"Title": "Department Manager",
+			"Salary": 69250.0
+		},
+		{
+			"State": "Victoria",
+			"Industry": "Hardware, building and garden supplies retailing",
+			"Turnover Rate": 0.0046328495,
+			"Retail Trade": "Hardware, building and garden supplies retailing",
+			"Title": "Department Manager",
+			"Salary": 69250.0
+		},
+		{
+			"State": "Victoria",
+			"Industry": "Household goods retailing",
+			"Turnover Rate": 0.0116345346,
+			"Retail Trade": "Household goods retailing",
+			"Title": "Department Manager",
+			"Salary": 69250.0
+		},
+		{
+			"State": "Victoria",
+			"Industry": "Clothing retailing",
+			"Turnover Rate": 0.0657044959,
+			"Retail Trade": "Clothing retailing",
+			"Title": "Department Manager",
+			"Salary": 69250.0
+		},
+		{
+			"State": "Victoria",
+			"Industry": "Footwear and other personal accessory retailing",
+			"Turnover Rate": 0.0538819119,
+			"Retail Trade": "Footwear and other personal accessory retailing",
+			"Title": "Department Manager",
+			"Salary": 69250.0
+		},
+		{
+			"State": "Victoria",
+			"Industry": "Clothing, footwear and personal accessory retailing",
+			"Turnover Rate": 0.0604772291,
+			"Retail Trade": "Clothing, footwear and personal accessory retailing",
+			"Title": "Boutique Manager",
+			"Salary": 83750.0
+		},
+		{
+			"State": "Victoria",
+			"Industry": "Department stores",
+			"Turnover Rate": 0.0456980124,
+			"Retail Trade": "Department stores",
+			"Title": "Department Manager",
+			"Salary": 69250.0
+		},
+		{
+			"State": "Victoria",
+			"Industry": "Newspaper and book retailing",
+			"Turnover Rate": 0.021999147,
+			"Retail Trade": "Newspaper and book retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Victoria",
+			"Industry": "Other recreational goods retailing",
+			"Turnover Rate": 0.0387602639,
+			"Retail Trade": "Other recreational goods retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Victoria",
+			"Industry": "Pharmaceutical, cosmetic and toiletry goods retailing",
+			"Turnover Rate": 0.0140227267,
+			"Retail Trade": "Pharmaceutical, cosmetic and toiletry goods retailing",
+			"Title": "Pharmacist in Charge",
+			"Salary": 105000.0
+		},
+		{
+			"State": "Victoria",
+			"Industry": "Other retailing n.e.c.",
+			"Turnover Rate": 0.0142831175,
+			"Retail Trade": "Other retailing n.e.c.",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Victoria",
+			"Industry": "Other retailing",
+			"Turnover Rate": 0.01474061,
+			"Retail Trade": "Other retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Victoria",
+			"Industry": "Cafes, restaurants and catering services",
+			"Turnover Rate": 0.0353124641,
+			"Retail Trade": "Cafes, restaurants and catering services",
+			"Title": "Restaurant Manager",
+			"Salary": 76000.0
+		},
+		{
+			"State": "Victoria",
+			"Industry": "Takeaway food services",
+			"Turnover Rate": 0.0079174739,
+			"Retail Trade": "Takeaway food services",
+			"Title": "Caf\u00e9 Manager",
+			"Salary": 75000.0
+		},
+		{
+			"State": "Victoria",
+			"Industry": "Cafes, restaurants and takeaway food services",
+			"Turnover Rate": 0.0164834022,
+			"Retail Trade": "Cafes, restaurants and takeaway food services",
+			"Title": "Caf\u00e9 Manager",
+			"Salary": 75000.0
+		},
+		{
+			"State": "Victoria",
+			"Industry": "Total (Industry)",
+			"Turnover Rate": 0.0108112188,
+			"Retail Trade": "Total (Industry)",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Queensland",
+			"Industry": "Supermarket and grocery stores",
+			"Turnover Rate": 0.0063952497,
+			"Retail Trade": "Supermarket and grocery stores",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Queensland",
+			"Industry": "Liquor retailing",
+			"Turnover Rate": null,
+			"Retail Trade": "Liquor retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Queensland",
+			"Industry": "Other specialised food retailing",
+			"Turnover Rate": null,
+			"Retail Trade": "Other specialised food retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Queensland",
+			"Industry": "Food retailing",
+			"Turnover Rate": 0.007465765,
+			"Retail Trade": "Food retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Queensland",
+			"Industry": "Furniture, floor coverings, houseware and textile goods retailing",
+			"Turnover Rate": 0.00926766,
+			"Retail Trade": "Furniture, floor coverings, houseware and textile goods retailing",
+			"Title": "Department Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Queensland",
+			"Industry": "Electrical and electronic goods retailing",
+			"Turnover Rate": 0.0136848467,
+			"Retail Trade": "Electrical and electronic goods retailing",
+			"Title": "Department Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Queensland",
+			"Industry": "Hardware, building and garden supplies retailing",
+			"Turnover Rate": 0.0070911069,
+			"Retail Trade": "Hardware, building and garden supplies retailing",
+			"Title": "Department Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Queensland",
+			"Industry": "Household goods retailing",
+			"Turnover Rate": 0.008114114,
+			"Retail Trade": "Household goods retailing",
+			"Title": "Department Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Queensland",
+			"Industry": "Clothing retailing",
+			"Turnover Rate": 0.0380206894,
+			"Retail Trade": "Clothing retailing",
+			"Title": "Department Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Queensland",
+			"Industry": "Footwear and other personal accessory retailing",
+			"Turnover Rate": 0.0480201412,
+			"Retail Trade": "Footwear and other personal accessory retailing",
+			"Title": "Department Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Queensland",
+			"Industry": "Clothing, footwear and personal accessory retailing",
+			"Turnover Rate": 0.0401792169,
+			"Retail Trade": "Clothing, footwear and personal accessory retailing",
+			"Title": "Boutique Manager",
+			"Salary": 67500.0
+		},
+		{
+			"State": "Queensland",
+			"Industry": "Department stores",
+			"Turnover Rate": 0.0312765818,
+			"Retail Trade": "Department stores",
+			"Title": "Department Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Queensland",
+			"Industry": "Newspaper and book retailing",
+			"Turnover Rate": 0.0049667296,
+			"Retail Trade": "Newspaper and book retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Queensland",
+			"Industry": "Other recreational goods retailing",
+			"Turnover Rate": 0.0338885667,
+			"Retail Trade": "Other recreational goods retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Queensland",
+			"Industry": "Pharmaceutical, cosmetic and toiletry goods retailing",
+			"Turnover Rate": 0.010712151,
+			"Retail Trade": "Pharmaceutical, cosmetic and toiletry goods retailing",
+			"Title": "Pharmacist in Charge",
+			"Salary": 112500.0
+		},
+		{
+			"State": "Queensland",
+			"Industry": "Other retailing n.e.c.",
+			"Turnover Rate": 0.0084554362,
+			"Retail Trade": "Other retailing n.e.c.",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Queensland",
+			"Industry": "Other retailing",
+			"Turnover Rate": 0.0097079775,
+			"Retail Trade": "Other retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Queensland",
+			"Industry": "Cafes, restaurants and catering services",
+			"Turnover Rate": 0.0196295614,
+			"Retail Trade": "Cafes, restaurants and catering services",
+			"Title": "Restaurant Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Queensland",
+			"Industry": "Takeaway food services",
+			"Turnover Rate": 0.0097424558,
+			"Retail Trade": "Takeaway food services",
+			"Title": "Caf\u00e9 Manager",
+			"Salary": 72500.0
+		},
+		{
+			"State": "Queensland",
+			"Industry": "Cafes, restaurants and takeaway food services",
+			"Turnover Rate": 0.0127934258,
+			"Retail Trade": "Cafes, restaurants and takeaway food services",
+			"Title": "Caf\u00e9 Manager",
+			"Salary": 72500.0
+		},
+		{
+			"State": "Queensland",
+			"Industry": "Total (Industry)",
+			"Turnover Rate": 0.009308181,
+			"Retail Trade": "Total (Industry)",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "South Australia",
+			"Industry": "Supermarket and grocery stores",
+			"Turnover Rate": 0.0062290023,
+			"Retail Trade": "Supermarket and grocery stores",
+			"Title": "Retail Store Manager",
+			"Salary": 67500.0
+		},
+		{
+			"State": "South Australia",
+			"Industry": "Liquor retailing",
+			"Turnover Rate": -0.0096293105,
+			"Retail Trade": "Liquor retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 67500.0
+		},
+		{
+			"State": "South Australia",
+			"Industry": "Other specialised food retailing",
+			"Turnover Rate": 0.0099779648,
+			"Retail Trade": "Other specialised food retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 67500.0
+		},
+		{
+			"State": "South Australia",
+			"Industry": "Food retailing",
+			"Turnover Rate": 0.0075851872,
+			"Retail Trade": "Food retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 67500.0
+		},
+		{
+			"State": "South Australia",
+			"Industry": "Furniture, floor coverings, houseware and textile goods retailing",
+			"Turnover Rate": 0.0126953311,
+			"Retail Trade": "Furniture, floor coverings, houseware and textile goods retailing",
+			"Title": "Department Manager",
+			"Salary": 82000.0
+		},
+		{
+			"State": "South Australia",
+			"Industry": "Electrical and electronic goods retailing",
+			"Turnover Rate": 0.0152376699,
+			"Retail Trade": "Electrical and electronic goods retailing",
+			"Title": "Department Manager",
+			"Salary": 82000.0
+		},
+		{
+			"State": "South Australia",
+			"Industry": "Hardware, building and garden supplies retailing",
+			"Turnover Rate": 0.0104417212,
+			"Retail Trade": "Hardware, building and garden supplies retailing",
+			"Title": "Department Manager",
+			"Salary": 82000.0
+		},
+		{
+			"State": "South Australia",
+			"Industry": "Household goods retailing",
+			"Turnover Rate": 0.0104529945,
+			"Retail Trade": "Household goods retailing",
+			"Title": "Department Manager",
+			"Salary": 82000.0
+		},
+		{
+			"State": "South Australia",
+			"Industry": "Clothing retailing",
+			"Turnover Rate": 0.0489834533,
+			"Retail Trade": "Clothing retailing",
+			"Title": "Department Manager",
+			"Salary": 82000.0
+		},
+		{
+			"State": "South Australia",
+			"Industry": "Footwear and other personal accessory retailing",
+			"Turnover Rate": 0.0339726056,
+			"Retail Trade": "Footwear and other personal accessory retailing",
+			"Title": "Department Manager",
+			"Salary": 82000.0
+		},
+		{
+			"State": "South Australia",
+			"Industry": "Clothing, footwear and personal accessory retailing",
+			"Turnover Rate": 0.0395509506,
+			"Retail Trade": "Clothing, footwear and personal accessory retailing",
+			"Title": "Boutique Manager",
+			"Salary": 66500.0
+		},
+		{
+			"State": "South Australia",
+			"Industry": "Department stores",
+			"Turnover Rate": 0.03015966,
+			"Retail Trade": "Department stores",
+			"Title": "Department Manager",
+			"Salary": 82000.0
+		},
+		{
+			"State": "South Australia",
+			"Industry": "Newspaper and book retailing",
+			"Turnover Rate": 0.0216124017,
+			"Retail Trade": "Newspaper and book retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 67500.0
+		},
+		{
+			"State": "South Australia",
+			"Industry": "Other recreational goods retailing",
+			"Turnover Rate": 0.0331022054,
+			"Retail Trade": "Other recreational goods retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 67500.0
+		},
+		{
+			"State": "South Australia",
+			"Industry": "Pharmaceutical, cosmetic and toiletry goods retailing",
+			"Turnover Rate": 0.0119719638,
+			"Retail Trade": "Pharmaceutical, cosmetic and toiletry goods retailing",
+			"Title": "Pharmacist in Charge",
+			"Salary": 113333.0
+		},
+		{
+			"State": "South Australia",
+			"Industry": "Other retailing n.e.c.",
+			"Turnover Rate": 0.0091737376,
+			"Retail Trade": "Other retailing n.e.c.",
+			"Title": "Retail Store Manager",
+			"Salary": 67500.0
+		},
+		{
+			"State": "South Australia",
+			"Industry": "Other retailing",
+			"Turnover Rate": 0.0114085355,
+			"Retail Trade": "Other retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 67500.0
+		},
+		{
+			"State": "South Australia",
+			"Industry": "Cafes, restaurants and catering services",
+			"Turnover Rate": 0.0125304208,
+			"Retail Trade": "Cafes, restaurants and catering services",
+			"Title": "Restaurant Manager",
+			"Salary": 76575.0
+		},
+		{
+			"State": "South Australia",
+			"Industry": "Takeaway food services",
+			"Turnover Rate": 0.006286401,
+			"Retail Trade": "Takeaway food services",
+			"Title": "Caf\u00e9 Manager",
+			"Salary": 74500.0
+		},
+		{
+			"State": "South Australia",
+			"Industry": "Cafes, restaurants and takeaway food services",
+			"Turnover Rate": 0.0081010188,
+			"Retail Trade": "Cafes, restaurants and takeaway food services",
+			"Title": "Caf\u00e9 Manager",
+			"Salary": 74500.0
+		},
+		{
+			"State": "South Australia",
+			"Industry": "Total (Industry)",
+			"Turnover Rate": 0.0093193509,
+			"Retail Trade": "Total (Industry)",
+			"Title": "Retail Store Manager",
+			"Salary": 67500.0
+		},
+		{
+			"State": "Western Australia",
+			"Industry": "Supermarket and grocery stores",
+			"Turnover Rate": 0.0069669337,
+			"Retail Trade": "Supermarket and grocery stores",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Western Australia",
+			"Industry": "Liquor retailing",
+			"Turnover Rate": 0.022459531,
+			"Retail Trade": "Liquor retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Western Australia",
+			"Industry": "Other specialised food retailing",
+			"Turnover Rate": 0.0131787999,
+			"Retail Trade": "Other specialised food retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Western Australia",
+			"Industry": "Food retailing",
+			"Turnover Rate": 0.0083410387,
+			"Retail Trade": "Food retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Western Australia",
+			"Industry": "Furniture, floor coverings, houseware and textile goods retailing",
+			"Turnover Rate": 0.0133361625,
+			"Retail Trade": "Furniture, floor coverings, houseware and textile goods retailing",
+			"Title": "Department Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Western Australia",
+			"Industry": "Electrical and electronic goods retailing",
+			"Turnover Rate": 0.0192990427,
+			"Retail Trade": "Electrical and electronic goods retailing",
+			"Title": "Department Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Western Australia",
+			"Industry": "Hardware, building and garden supplies retailing",
+			"Turnover Rate": 0.0093114068,
+			"Retail Trade": "Hardware, building and garden supplies retailing",
+			"Title": "Department Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Western Australia",
+			"Industry": "Household goods retailing",
+			"Turnover Rate": 0.0116273154,
+			"Retail Trade": "Household goods retailing",
+			"Title": "Department Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Western Australia",
+			"Industry": "Clothing retailing",
+			"Turnover Rate": 0.0498931647,
+			"Retail Trade": "Clothing retailing",
+			"Title": "Department Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Western Australia",
+			"Industry": "Footwear and other personal accessory retailing",
+			"Turnover Rate": 0.0465779714,
+			"Retail Trade": "Footwear and other personal accessory retailing",
+			"Title": "Department Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Western Australia",
+			"Industry": "Clothing, footwear and personal accessory retailing",
+			"Turnover Rate": 0.0474045885,
+			"Retail Trade": "Clothing, footwear and personal accessory retailing",
+			"Title": "Boutique Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Western Australia",
+			"Industry": "Department stores",
+			"Turnover Rate": 0.0333183348,
+			"Retail Trade": "Department stores",
+			"Title": "Department Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Western Australia",
+			"Industry": "Newspaper and book retailing",
+			"Turnover Rate": 0.0011481936,
+			"Retail Trade": "Newspaper and book retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Western Australia",
+			"Industry": "Other recreational goods retailing",
+			"Turnover Rate": 0.0297906398,
+			"Retail Trade": "Other recreational goods retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Western Australia",
+			"Industry": "Pharmaceutical, cosmetic and toiletry goods retailing",
+			"Turnover Rate": 0.0151652686,
+			"Retail Trade": "Pharmaceutical, cosmetic and toiletry goods retailing",
+			"Title": "Pharmacist in Charge",
+			"Salary": 113333.0
+		},
+		{
+			"State": "Western Australia",
+			"Industry": "Other retailing n.e.c.",
+			"Turnover Rate": 0.0150679119,
+			"Retail Trade": "Other retailing n.e.c.",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Western Australia",
+			"Industry": "Other retailing",
+			"Turnover Rate": 0.014375575,
+			"Retail Trade": "Other retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Western Australia",
+			"Industry": "Cafes, restaurants and catering services",
+			"Turnover Rate": 0.0114039412,
+			"Retail Trade": "Cafes, restaurants and catering services",
+			"Title": "Restaurant Manager",
+			"Salary": 80000.0
+		},
+		{
+			"State": "Western Australia",
+			"Industry": "Takeaway food services",
+			"Turnover Rate": 0.0098007044,
+			"Retail Trade": "Takeaway food services",
+			"Title": "Caf\u00e9 Manager",
+			"Salary": 72500.0
+		},
+		{
+			"State": "Western Australia",
+			"Industry": "Cafes, restaurants and takeaway food services",
+			"Turnover Rate": 0.0097023927,
+			"Retail Trade": "Cafes, restaurants and takeaway food services",
+			"Title": "Caf\u00e9 Manager",
+			"Salary": 72500.0
+		},
+		{
+			"State": "Western Australia",
+			"Industry": "Total (Industry)",
+			"Turnover Rate": 0.0107009339,
+			"Retail Trade": "Total (Industry)",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Tasmania",
+			"Industry": "Supermarket and grocery stores",
+			"Turnover Rate": 0.0062716895,
+			"Retail Trade": "Supermarket and grocery stores",
+			"Title": "Retail Store Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Tasmania",
+			"Industry": "Liquor retailing",
+			"Turnover Rate": 0.0210956212,
+			"Retail Trade": "Liquor retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Tasmania",
+			"Industry": "Other specialised food retailing",
+			"Turnover Rate": 0.0168683802,
+			"Retail Trade": "Other specialised food retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Tasmania",
+			"Industry": "Food retailing",
+			"Turnover Rate": 0.0076603979,
+			"Retail Trade": "Food retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Tasmania",
+			"Industry": "Furniture, floor coverings, houseware and textile goods retailing",
+			"Turnover Rate": 0.0124461041,
+			"Retail Trade": "Furniture, floor coverings, houseware and textile goods retailing",
+			"Title": "Department Manager",
+			"Salary": 77250.0
+		},
+		{
+			"State": "Tasmania",
+			"Industry": "Electrical and electronic goods retailing",
+			"Turnover Rate": 0.0096101372,
+			"Retail Trade": "Electrical and electronic goods retailing",
+			"Title": "Department Manager",
+			"Salary": 77250.0
+		},
+		{
+			"State": "Tasmania",
+			"Industry": "Hardware, building and garden supplies retailing",
+			"Turnover Rate": -0.0013103833,
+			"Retail Trade": "Hardware, building and garden supplies retailing",
+			"Title": "Department Manager",
+			"Salary": 77250.0
+		},
+		{
+			"State": "Tasmania",
+			"Industry": "Household goods retailing",
+			"Turnover Rate": 0.0004458627,
+			"Retail Trade": "Household goods retailing",
+			"Title": "Department Manager",
+			"Salary": 77250.0
+		},
+		{
+			"State": "Tasmania",
+			"Industry": "Clothing retailing",
+			"Turnover Rate": 0.0455917301,
+			"Retail Trade": "Clothing retailing",
+			"Title": "Department Manager",
+			"Salary": 77250.0
+		},
+		{
+			"State": "Tasmania",
+			"Industry": "Footwear and other personal accessory retailing",
+			"Turnover Rate": 0.0442792585,
+			"Retail Trade": "Footwear and other personal accessory retailing",
+			"Title": "Department Manager",
+			"Salary": 77250.0
+		},
+		{
+			"State": "Tasmania",
+			"Industry": "Clothing, footwear and personal accessory retailing",
+			"Turnover Rate": 0.0746547852,
+			"Retail Trade": "Clothing, footwear and personal accessory retailing",
+			"Title": "Boutique Manager",
+			"Salary": 73063.0
+		},
+		{
+			"State": "Tasmania",
+			"Industry": "Department stores",
+			"Turnover Rate": null,
+			"Retail Trade": "Department stores",
+			"Title": "Department Manager",
+			"Salary": 77250.0
+		},
+		{
+			"State": "Tasmania",
+			"Industry": "Newspaper and book retailing",
+			"Turnover Rate": -0.0012605316,
+			"Retail Trade": "Newspaper and book retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Tasmania",
+			"Industry": "Other recreational goods retailing",
+			"Turnover Rate": 0.022744198,
+			"Retail Trade": "Other recreational goods retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Tasmania",
+			"Industry": "Pharmaceutical, cosmetic and toiletry goods retailing",
+			"Turnover Rate": 0.0102005457,
+			"Retail Trade": "Pharmaceutical, cosmetic and toiletry goods retailing",
+			"Title": "Pharmacist in Charge",
+			"Salary": 113333.0
+		},
+		{
+			"State": "Tasmania",
+			"Industry": "Other retailing n.e.c.",
+			"Turnover Rate": 0.0128467967,
+			"Retail Trade": "Other retailing n.e.c.",
+			"Title": "Retail Store Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Tasmania",
+			"Industry": "Other retailing",
+			"Turnover Rate": 0.0096099348,
+			"Retail Trade": "Other retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Tasmania",
+			"Industry": "Cafes, restaurants and catering services",
+			"Turnover Rate": 0.0377905999,
+			"Retail Trade": "Cafes, restaurants and catering services",
+			"Title": "Restaurant Manager",
+			"Salary": 73750.0
+		},
+		{
+			"State": "Tasmania",
+			"Industry": "Takeaway food services",
+			"Turnover Rate": 0.0076344565,
+			"Retail Trade": "Takeaway food services",
+			"Title": "Caf\u00e9 Manager",
+			"Salary": 73000.0
+		},
+		{
+			"State": "Tasmania",
+			"Industry": "Cafes, restaurants and takeaway food services",
+			"Turnover Rate": 0.0117617897,
+			"Retail Trade": "Cafes, restaurants and takeaway food services",
+			"Title": "Caf\u00e9 Manager",
+			"Salary": 73000.0
+		},
+		{
+			"State": "Tasmania",
+			"Industry": "Total (Industry)",
+			"Turnover Rate": 0.0083228132,
+			"Retail Trade": "Total (Industry)",
+			"Title": "Retail Store Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Northern Territory",
+			"Industry": "Supermarket and grocery stores",
+			"Turnover Rate": 0.0048832246,
+			"Retail Trade": "Supermarket and grocery stores",
+			"Title": "Retail Store Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Northern Territory",
+			"Industry": "Liquor retailing",
+			"Turnover Rate": null,
+			"Retail Trade": "Liquor retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Northern Territory",
+			"Industry": "Other specialised food retailing",
+			"Turnover Rate": null,
+			"Retail Trade": "Other specialised food retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Northern Territory",
+			"Industry": "Food retailing",
+			"Turnover Rate": 0.0060232059,
+			"Retail Trade": "Food retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Northern Territory",
+			"Industry": "Furniture, floor coverings, houseware and textile goods retailing",
+			"Turnover Rate": 0.015202199,
+			"Retail Trade": "Furniture, floor coverings, houseware and textile goods retailing",
+			"Title": "Department Manager",
+			"Salary": 80000.0
+		},
+		{
+			"State": "Northern Territory",
+			"Industry": "Electrical and electronic goods retailing",
+			"Turnover Rate": 0.0171895498,
+			"Retail Trade": "Electrical and electronic goods retailing",
+			"Title": "Department Manager",
+			"Salary": 80000.0
+		},
+		{
+			"State": "Northern Territory",
+			"Industry": "Hardware, building and garden supplies retailing",
+			"Turnover Rate": -0.0011681856,
+			"Retail Trade": "Hardware, building and garden supplies retailing",
+			"Title": "Department Manager",
+			"Salary": 80000.0
+		},
+		{
+			"State": "Northern Territory",
+			"Industry": "Household goods retailing",
+			"Turnover Rate": 0.0011593136,
+			"Retail Trade": "Household goods retailing",
+			"Title": "Department Manager",
+			"Salary": 80000.0
+		},
+		{
+			"State": "Northern Territory",
+			"Industry": "Clothing retailing",
+			"Turnover Rate": 0.0333617975,
+			"Retail Trade": "Clothing retailing",
+			"Title": "Department Manager",
+			"Salary": 80000.0
+		},
+		{
+			"State": "Northern Territory",
+			"Industry": "Footwear and other personal accessory retailing",
+			"Turnover Rate": 0.0921973066,
+			"Retail Trade": "Footwear and other personal accessory retailing",
+			"Title": "Department Manager",
+			"Salary": 80000.0
+		},
+		{
+			"State": "Northern Territory",
+			"Industry": "Clothing, footwear and personal accessory retailing",
+			"Turnover Rate": 0.078494065,
+			"Retail Trade": "Clothing, footwear and personal accessory retailing",
+			"Title": "Boutique Manager",
+			"Salary": 73063.0
+		},
+		{
+			"State": "Northern Territory",
+			"Industry": "Department stores",
+			"Turnover Rate": null,
+			"Retail Trade": "Department stores",
+			"Title": "Department Manager",
+			"Salary": 80000.0
+		},
+		{
+			"State": "Northern Territory",
+			"Industry": "Newspaper and book retailing",
+			"Turnover Rate": 0.0303463787,
+			"Retail Trade": "Newspaper and book retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Northern Territory",
+			"Industry": "Other recreational goods retailing",
+			"Turnover Rate": 0.0299030521,
+			"Retail Trade": "Other recreational goods retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Northern Territory",
+			"Industry": "Pharmaceutical, cosmetic and toiletry goods retailing",
+			"Turnover Rate": 0.0197001365,
+			"Retail Trade": "Pharmaceutical, cosmetic and toiletry goods retailing",
+			"Title": "Pharmacist in Charge",
+			"Salary": 113333.0
+		},
+		{
+			"State": "Northern Territory",
+			"Industry": "Other retailing n.e.c.",
+			"Turnover Rate": 0.0044533892,
+			"Retail Trade": "Other retailing n.e.c.",
+			"Title": "Retail Store Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Northern Territory",
+			"Industry": "Other retailing",
+			"Turnover Rate": 0.0095429923,
+			"Retail Trade": "Other retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Northern Territory",
+			"Industry": "Cafes, restaurants and catering services",
+			"Turnover Rate": 0.0126207584,
+			"Retail Trade": "Cafes, restaurants and catering services",
+			"Title": "Restaurant Manager",
+			"Salary": 82500.0
+		},
+		{
+			"State": "Northern Territory",
+			"Industry": "Takeaway food services",
+			"Turnover Rate": 0.0023962781,
+			"Retail Trade": "Takeaway food services",
+			"Title": "Caf\u00e9 Manager",
+			"Salary": 73042.0
+		},
+		{
+			"State": "Northern Territory",
+			"Industry": "Cafes, restaurants and takeaway food services",
+			"Turnover Rate": 0.0060410836,
+			"Retail Trade": "Cafes, restaurants and takeaway food services",
+			"Title": "Caf\u00e9 Manager",
+			"Salary": 73042.0
+		},
+		{
+			"State": "Northern Territory",
+			"Industry": "Total (Industry)",
+			"Turnover Rate": 0.0075258575,
+			"Retail Trade": "Total (Industry)",
+			"Title": "Retail Store Manager",
+			"Salary": 77500.0
+		},
+		{
+			"State": "Australian Capital Territory",
+			"Industry": "Supermarket and grocery stores",
+			"Turnover Rate": 0.0043890754,
+			"Retail Trade": "Supermarket and grocery stores",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Australian Capital Territory",
+			"Industry": "Liquor retailing",
+			"Turnover Rate": 0.0286385234,
+			"Retail Trade": "Liquor retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Australian Capital Territory",
+			"Industry": "Other specialised food retailing",
+			"Turnover Rate": 0.0205831845,
+			"Retail Trade": "Other specialised food retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Australian Capital Territory",
+			"Industry": "Food retailing",
+			"Turnover Rate": 0.006018633,
+			"Retail Trade": "Food retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Australian Capital Territory",
+			"Industry": "Furniture, floor coverings, houseware and textile goods retailing",
+			"Turnover Rate": 0.0135596913,
+			"Retail Trade": "Furniture, floor coverings, houseware and textile goods retailing",
+			"Title": "Department Manager",
+			"Salary": 80000.0
+		},
+		{
+			"State": "Australian Capital Territory",
+			"Industry": "Electrical and electronic goods retailing",
+			"Turnover Rate": 0.0178659779,
+			"Retail Trade": "Electrical and electronic goods retailing",
+			"Title": "Department Manager",
+			"Salary": 80000.0
+		},
+		{
+			"State": "Australian Capital Territory",
+			"Industry": "Hardware, building and garden supplies retailing",
+			"Turnover Rate": 0.0113083959,
+			"Retail Trade": "Hardware, building and garden supplies retailing",
+			"Title": "Department Manager",
+			"Salary": 80000.0
+		},
+		{
+			"State": "Australian Capital Territory",
+			"Industry": "Household goods retailing",
+			"Turnover Rate": 0.0112439333,
+			"Retail Trade": "Household goods retailing",
+			"Title": "Department Manager",
+			"Salary": 80000.0
+		},
+		{
+			"State": "Australian Capital Territory",
+			"Industry": "Clothing retailing",
+			"Turnover Rate": 0.0661000224,
+			"Retail Trade": "Clothing retailing",
+			"Title": "Department Manager",
+			"Salary": 80000.0
+		},
+		{
+			"State": "Australian Capital Territory",
+			"Industry": "Footwear and other personal accessory retailing",
+			"Turnover Rate": 0.0546561775,
+			"Retail Trade": "Footwear and other personal accessory retailing",
+			"Title": "Department Manager",
+			"Salary": 80000.0
+		},
+		{
+			"State": "Australian Capital Territory",
+			"Industry": "Clothing, footwear and personal accessory retailing",
+			"Turnover Rate": 0.0597565015,
+			"Retail Trade": "Clothing, footwear and personal accessory retailing",
+			"Title": "Boutique Manager",
+			"Salary": 73063.0
+		},
+		{
+			"State": "Australian Capital Territory",
+			"Industry": "Department stores",
+			"Turnover Rate": 0.4828037053,
+			"Retail Trade": "Department stores",
+			"Title": "Department Manager",
+			"Salary": 80000.0
+		},
+		{
+			"State": "Australian Capital Territory",
+			"Industry": "Newspaper and book retailing",
+			"Turnover Rate": 0.0467101932,
+			"Retail Trade": "Newspaper and book retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Australian Capital Territory",
+			"Industry": "Other recreational goods retailing",
+			"Turnover Rate": 0.0675793865,
+			"Retail Trade": "Other recreational goods retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Australian Capital Territory",
+			"Industry": "Pharmaceutical, cosmetic and toiletry goods retailing",
+			"Turnover Rate": 0.018831118,
+			"Retail Trade": "Pharmaceutical, cosmetic and toiletry goods retailing",
+			"Title": "Pharmacist in Charge",
+			"Salary": 113333.0
+		},
+		{
+			"State": "Australian Capital Territory",
+			"Industry": "Other retailing n.e.c.",
+			"Turnover Rate": 0.0115047911,
+			"Retail Trade": "Other retailing n.e.c.",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Australian Capital Territory",
+			"Industry": "Other retailing",
+			"Turnover Rate": 0.0149483145,
+			"Retail Trade": "Other retailing",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Australian Capital Territory",
+			"Industry": "Cafes, restaurants and catering services",
+			"Turnover Rate": 0.0318019748,
+			"Retail Trade": "Cafes, restaurants and catering services",
+			"Title": "Restaurant Manager",
+			"Salary": 75000.0
+		},
+		{
+			"State": "Australian Capital Territory",
+			"Industry": "Takeaway food services",
+			"Turnover Rate": 0.0071661231,
+			"Retail Trade": "Takeaway food services",
+			"Title": "Caf\u00e9 Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Australian Capital Territory",
+			"Industry": "Cafes, restaurants and takeaway food services",
+			"Turnover Rate": 0.0158526965,
+			"Retail Trade": "Cafes, restaurants and takeaway food services",
+			"Title": "Caf\u00e9 Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Australian Capital Territory",
+			"Industry": "Total (Industry)",
+			"Turnover Rate": 0.0100098379,
+			"Retail Trade": "Total (Industry)",
+			"Title": "Retail Store Manager",
+			"Salary": 70000.0
+		},
+		{
+			"State": "Total (State)",
+			"Industry": "Supermarket and grocery stores",
+			"Turnover Rate": 0.0060350101,
+			"Retail Trade": "Supermarket and grocery stores",
+			"Title": "Retail Store Manager",
+			"Salary": null
+		},
+		{
+			"State": "Total (State)",
+			"Industry": "Liquor retailing",
+			"Turnover Rate": 0.0251233085,
+			"Retail Trade": "Liquor retailing",
+			"Title": "Retail Store Manager",
+			"Salary": null
+		},
+		{
+			"State": "Total (State)",
+			"Industry": "Other specialised food retailing",
+			"Turnover Rate": 0.0116042567,
+			"Retail Trade": "Other specialised food retailing",
+			"Title": "Retail Store Manager",
+			"Salary": null
+		},
+		{
+			"State": "Total (State)",
+			"Industry": "Food retailing",
+			"Turnover Rate": 0.0074404249,
+			"Retail Trade": "Food retailing",
+			"Title": "Retail Store Manager",
+			"Salary": null
+		},
+		{
+			"State": "Total (State)",
+			"Industry": "Furniture, floor coverings, houseware and textile goods retailing",
+			"Turnover Rate": 0.0105895684,
+			"Retail Trade": "Furniture, floor coverings, houseware and textile goods retailing",
+			"Title": "Department Manager",
+			"Salary": null
+		},
+		{
+			"State": "Total (State)",
+			"Industry": "Electrical and electronic goods retailing",
+			"Turnover Rate": 0.0155518785,
+			"Retail Trade": "Electrical and electronic goods retailing",
+			"Title": "Department Manager",
+			"Salary": null
+		},
+		{
+			"State": "Total (State)",
+			"Industry": "Hardware, building and garden supplies retailing",
+			"Turnover Rate": 0.0063326294,
+			"Retail Trade": "Hardware, building and garden supplies retailing",
+			"Title": "Department Manager",
+			"Salary": null
+		},
+		{
+			"State": "Total (State)",
+			"Industry": "Household goods retailing",
+			"Turnover Rate": 0.0089803447,
+			"Retail Trade": "Household goods retailing",
+			"Title": "Department Manager",
+			"Salary": null
+		},
+		{
+			"State": "Total (State)",
+			"Industry": "Clothing retailing",
+			"Turnover Rate": 0.0413277708,
+			"Retail Trade": "Clothing retailing",
+			"Title": "Department Manager",
+			"Salary": null
+		},
+		{
+			"State": "Total (State)",
+			"Industry": "Footwear and other personal accessory retailing",
+			"Turnover Rate": 0.0371972419,
+			"Retail Trade": "Footwear and other personal accessory retailing",
+			"Title": "Department Manager",
+			"Salary": null
+		},
+		{
+			"State": "Total (State)",
+			"Industry": "Clothing, footwear and personal accessory retailing",
+			"Turnover Rate": 0.0390453306,
+			"Retail Trade": "Clothing, footwear and personal accessory retailing",
+			"Title": "Boutique Manager",
+			"Salary": null
+		},
+		{
+			"State": "Total (State)",
+			"Industry": "Department stores",
+			"Turnover Rate": 0.0324965873,
+			"Retail Trade": "Department stores",
+			"Title": "Department Manager",
+			"Salary": null
+		},
+		{
+			"State": "Total (State)",
+			"Industry": "Newspaper and book retailing",
+			"Turnover Rate": 0.0068910343,
+			"Retail Trade": "Newspaper and book retailing",
+			"Title": "Retail Store Manager",
+			"Salary": null
+		},
+		{
+			"State": "Total (State)",
+			"Industry": "Other recreational goods retailing",
+			"Turnover Rate": 0.0290295073,
+			"Retail Trade": "Other recreational goods retailing",
+			"Title": "Retail Store Manager",
+			"Salary": null
+		},
+		{
+			"State": "Total (State)",
+			"Industry": "Pharmaceutical, cosmetic and toiletry goods retailing",
+			"Turnover Rate": 0.0131169055,
+			"Retail Trade": "Pharmaceutical, cosmetic and toiletry goods retailing",
+			"Title": "Pharmacist in Charge",
+			"Salary": null
+		},
+		{
+			"State": "Total (State)",
+			"Industry": "Other retailing n.e.c.",
+			"Turnover Rate": 0.0114054239,
+			"Retail Trade": "Other retailing n.e.c.",
+			"Title": "Retail Store Manager",
+			"Salary": null
+		},
+		{
+			"State": "Total (State)",
+			"Industry": "Other retailing",
+			"Turnover Rate": 0.0122100262,
+			"Retail Trade": "Other retailing",
+			"Title": "Retail Store Manager",
+			"Salary": null
+		},
+		{
+			"State": "Total (State)",
+			"Industry": "Cafes, restaurants and catering services",
+			"Turnover Rate": 0.0170978176,
+			"Retail Trade": "Cafes, restaurants and catering services",
+			"Title": "Restaurant Manager",
+			"Salary": null
+		},
+		{
+			"State": "Total (State)",
+			"Industry": "Takeaway food services",
+			"Turnover Rate": 0.006446222,
+			"Retail Trade": "Takeaway food services",
+			"Title": "Caf\u00e9 Manager",
+			"Salary": null
+		},
+		{
+			"State": "Total (State)",
+			"Industry": "Cafes, restaurants and takeaway food services",
+			"Turnover Rate": 0.0106242312,
+			"Retail Trade": "Cafes, restaurants and takeaway food services",
+			"Title": "Caf\u00e9 Manager",
+			"Salary": null
+		},
+		{
+			"State": "Total (State)",
+			"Industry": "Total (Industry)",
+			"Turnover Rate": 0.0096128575,
+			"Retail Trade": "Total (Industry)",
+			"Title": "Retail Store Manager",
+			"Salary": null
+		}
+	]
+}

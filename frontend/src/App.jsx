@@ -9,6 +9,8 @@ import MainLayOut from "./layouts/MainLayOut";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ListingsPage from "./pages/ListingsPage";
+import ListingPage, { offerLoader } from "./pages/ListingPage";
+import DocumentationPage from "./pages/DocumentationPage";
 import LoginPage from "./pages/LoginPage";
 
 const router = createBrowserRouter(
@@ -16,8 +18,14 @@ const router = createBrowserRouter(
 		<Route path="/" element={<MainLayOut />}>
 			<Route index="/" element={<HomePage />}></Route>
 			<Route path="/about" element={<AboutPage />}></Route>
+			<Route
+				path="/listings/:id"
+				element={<ListingPage />}
+				loader={offerLoader}
+			></Route>
 			<Route path="/listings" element={<ListingsPage />}></Route>
-			<Route path="login" element={<LoginPage />}></Route>
+			<Route path="/login" element={<LoginPage />}></Route>
+			<Route path="/documentation" element={<DocumentationPage />}></Route>
 		</Route>
 	)
 );
