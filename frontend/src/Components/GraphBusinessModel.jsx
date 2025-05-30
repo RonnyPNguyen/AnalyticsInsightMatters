@@ -6,8 +6,10 @@ const GraphBusinessModel = ({ data }) => {
 	const colorGreen = "#2DC97E";
 	const colorRed = "#E64141";
 	const colorBlue = "#0566FC";
+	const colorYellow = "#F2C94C";
+	const colorPurple = "#9B51E0";
 	const colorBackground = "#111111";
-	const colorWhite = "#FFFfffFFF";
+	const colorWhite = "#FFFFFF";
 	const moneyFormat = (number) => {
 		return (
 			"$" +
@@ -37,7 +39,7 @@ const GraphBusinessModel = ({ data }) => {
 							borderWidth: 2,
 						},
 						{
-							label: "Total Expenses",
+							label: "Expenses",
 							data: [
 								data.TotalExpense1,
 								data.TotalExpense2,
@@ -49,13 +51,25 @@ const GraphBusinessModel = ({ data }) => {
 							borderWidth: 3,
 						},
 						{
-							label: "Net Profit",
+							label: "EBITDA",
 							data: [
 								data.EBITDA1 || 0,
 								data.EBITDA2 || 0,
 								data.EBITDA3 || 0,
 								data.EBITDA4 || 0,
 								data.EBITDA5 || 0,
+							],
+							backgroundColor: colorPurple,
+							borderWidth: 2,
+						},
+						{
+							label: "Net Income",
+							data: [
+								data.NI1 || 0,
+								data.NI2 || 0,
+								data.NI3 || 0,
+								data.NI4 || 0,
+								data.NI5 || 0,
 							],
 							backgroundColor: colorBlue,
 							borderWidth: 2,
@@ -76,21 +90,27 @@ const GraphBusinessModel = ({ data }) => {
 							text: "Business Model Overview",
 							color: "#ffffff",
 							font: { family: "Inter", weight: 400, size: 24 },
-							padding: { bottom: 10 },
+							padding: { bottom: 20 },
 						},
 					},
 					scales: {
 						x: {
-							ticks: { color: "#ffffff" },
-							font: { family: "Mono", weight: 200, size: 12 },
+							ticks: {
+								color: "#ffffff",
+								font: { family: "Roboto Mono", weight: 100, size: 12 },
+								padding: 10,
+							},
+							font: { family: "Roboto Mono", weight: 100, size: 12 },
 							padding: 0,
 						},
 						y: {
 							ticks: {
 								color: "#ffffff",
-								font: { family: "Mono", weight: 200, size: 12 },
+								font: { family: "Roboto Mono", weight: 100, size: 12 },
 								padding: 10,
 							},
+							font: { family: "Roboto Mono", weight: 100, size: 12 },
+							padding: 0,
 							grid: { color: "#333" },
 							beginAtZero: true,
 						},

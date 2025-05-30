@@ -1,20 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 @import "tailwindcss";
 
 @theme {
-	--font-mont: "Montserrat", sans-serif;
+	--font-logo: "Coral Pixels", sans-serif;
+	--font-writing: "Inter", sans-serif;
+	--font-tabular: "Roboto Mono", sans-serif;
+	--font-nav: "Montserrat", sans-serif;
+	--font-montserrat: "Montserrat", sans-serif;
 	--font-coralpixels: "Coral Pixels", sans-serif;
-	--font-pixelsans: "Pixelify Sans", sans-serif;
 	--font-inter: "Inter", sans-serif;
-	--color-mountbatten-pink: #9d7498ff;
-	--color-salmon-pink: #f2a09fff;
-	--color-rich-black: #0e0b1a;
-	--color-space-cadet: #1e2044ff;
-	--color-licorice: #1d101cff;
 }
 
 .diagonal-gradient {

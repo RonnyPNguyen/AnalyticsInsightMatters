@@ -12,22 +12,39 @@ const CardDetails = ({ offer }) => {
 	const percentFormat = (number) =>
 		typeof number === "number" ? `${(number * 100).toFixed(2)}%` : "...";
 
+	// Map of Australian state full names to abbreviations
+	const stateAbbreviations = {
+		"New South Wales": "NSW",
+		Victoria: "VIC",
+		Queensland: "QLD",
+		"South Australia": "SA",
+		"Western Australia": "WA",
+		Tasmania: "TAS",
+		"Northern Territory": "NT",
+		"Australian Capital Territory": "ACT",
+	};
+
+	const getStateAbbreviation = (stateName) =>
+		stateAbbreviations[stateName] || stateName;
+
 	return (
 		<div>
 			<Formula data={offer} onResult={setBd} />
-			<div className="font-inter flex justify-between items-center py-2">
+			<div className="font-tabular flex justify-between items-center py-2">
 				<div>
-					<p className="text-2xl font-semibold">{offer.BusinessName}</p>
+					<p className="text-base font-semibold">{offer.BusinessName}</p>
 					<div className="text-xs flex items-center space-x-2 text-gray-400">
 						<FaMapMarkerAlt className="text-red-500" />
 						<p className="text-left">
-							{`${offer.Suburb}, ${offer.State} ${offer.Postcode}`}
+							{`${offer.Suburb}, ${getStateAbbreviation(offer.State)} ${
+								offer.Postcode
+							}`}
 						</p>
 					</div>
 				</div>
-				<div className="font-inter text-right text-md">
-					<p className="">Asking Price</p>
-					<p className="">
+				<div className="font-tabular text-right">
+					<p className="text-xs text-gray-400">Asking Price</p>
+					<p className="text-base">
 						{`$${moneyFormat(offer.AskingPrice)} ${
 							bd?.SavIncluded === 0 ? "+ SAV" : ""
 						}`}{" "}
@@ -36,7 +53,7 @@ const CardDetails = ({ offer }) => {
 				</div>
 			</div>
 			{bd ? (
-				<div className="font-mono">
+				<div className="font-tabular">
 					<div className="py-2 flex justify-between space-x-2 text-xs text-center">
 						<div className="bg-[#2A3439] p-2 rounded-md text-orange-500">
 							Growth: {percentFormat(bd.GR)}
@@ -48,29 +65,29 @@ const CardDetails = ({ offer }) => {
 							{bd.employmentType}
 						</div>
 					</div>
-					<div className="text-xs py-2 px-2">
+					<div className="text-xs font-light py-2 px-2">
 						<div className="flex justify-between">
-							<p className="font-light py-1">Annual Revenue: {}</p>
+							<p className="py-1">Annual Revenue: {}</p>
 							<div className="flex justify-between">
 								<p>$</p>
 								<p>{moneyFormat(bd.TotalRevenue / 5)}</p>
 							</div>
 						</div>
 						<div className="flex justify-between">
-							<p className="font-light py-1">Annual Net Profit:</p>
+							<p className="py-1">Annual Net Profit:</p>
 							<div className="flex justify-between">
 								<p>$</p>
 								<p>{moneyFormat(bd.TotalNetProfit / 5)}</p>
 							</div>
 						</div>
 						<div className="flex justify-between">
-							<p className="font-light py-1">Profit Margin:</p>
+							<p className="py-1">Profit Margin:</p>
 							<div className="flex justify-between">
-								<p>{percentFormat(bd.ProfitMargin)}</p>
+								<p>{percentFormat(bd.NetProfitMargin)}</p>
 							</div>
 						</div>
-						<div className="flex justify-between">
-							<p className="font-light py-1">
+						{/* <div className="flex justify-between">
+							<p className="py-1">
 								Total Investment: {bd?.SavIncluded === 0 ? "(+ est. SAV)" : ""}
 							</p>
 							<div className="flex justify-between">
@@ -84,38 +101,40 @@ const CardDetails = ({ offer }) => {
 								<p>$</p>
 								<p>{moneyFormat(bd.TotalDCF)}</p>
 							</div>
-						</div>
+						</div> */}
 					</div>
-					<div className="text-md p-2 bg-[#2A3439] rounded-md text-center font-mono">
+					<div className="text-base p-2 bg-[#2A3439] rounded-md text-center font-tabular font-normal">
 						<div className="flex justify-between">
-							<p className="font-semibold">Net Present Value: </p>
+							<p className="">Net Present Value: </p>
 							<p
-								className={`${
-									bd.NPV < 0 ? "text-red-600" : "text-green-600"
-								} font-semibold`}
+								className={`${bd.NPV < 0 ? "text-red-600" : "text-green-600"} `}
 							>
 								${moneyFormat(bd.NPV)}
 							</p>
 						</div>
-						<div className="flex justify-between font-light">
+						<div className="flex justify-between">
 							<p className="">Estimation: </p>
 							<p
 								className={`${
-									bd.valueEstimation > 0 ? "text-green-600" : "text-red-600"
+									bd.valueEstimation > 0.1
+										? "text-green-600"
+										: bd.valueEstimation > -0.1
+										? "text-yellow-500"
+										: "text-red-600"
 								}`}
 							>
 								{bd.valueVerdict}
 							</p>
 						</div>
 					</div>
-					<div className="flex justify-between text-gray-400 text-sm py-2">
-						<button className="bg-blue-500 hover:bg-blue-700 text-white font-inter font-semibold py-1 px-4 rounded-md">
+					<div className="text-base flex justify-between text-gray-400 pt-4">
+						<button className="bg-[#2A3439] hover:bg-white hover:text-black text-white font-tabular font-semibold px-3 py-1 rounded-md">
 							<Link to={bd.url} target="_blank" rel="noopener noreferrer">
 								Source
 							</Link>
 						</button>
-						<button className="bg-blue-500 hover:bg-blue-700 text-white font-inter font-semibold py-1 px-4 rounded-md">
-							<Link to={`/listings/${offer.id}`}>More Details</Link>
+						<button className="bg-[#2A3439] hover:bg-white hover:text-black text-white font-tabular font-semibold px-3 py-1 rounded-md">
+							<Link to={`/listings/${offer.id}`}>Analyze</Link>
 						</button>
 					</div>
 				</div>

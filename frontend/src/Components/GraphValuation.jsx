@@ -12,6 +12,7 @@ import {
 	Legend,
 	Filler,
 } from "chart.js";
+import { max } from "d3";
 
 ChartJS.register(
 	CategoryScale,
@@ -33,9 +34,9 @@ const Graph = ({ data }) => {
 	const colorBlue = "#0566FC";
 	const colorGray = "#968D88";
 	const colorBlack = "#111111";
-	const barThickness = 120;
+	const barThickness = 100;
 	const labelOffsetX = 0;
-	const labelOffsetY = 220;
+	const labelOffsetY = 210;
 	const labelOffsetR = 90;
 	const moneyFormat = (number) => {
 		return (
@@ -89,7 +90,12 @@ const Graph = ({ data }) => {
 								min: 0,
 								max: Math.ceil((fairValue * 1.5) / 50000) * 50000,
 								stacked: true,
-								ticks: { display: true, color: "#fff" },
+								ticks: {
+									color: "#ffffff",
+									font: { family: "Roboto Mono", weight: 100, size: 12 },
+									stepSize: maxValue / 4,
+									padding: 10,
+								},
 								grid: {
 									display: true,
 									color: "#333333",
@@ -107,13 +113,36 @@ const Graph = ({ data }) => {
 							title: {
 								display: true,
 								text: "Valuation",
-								color: "#fff",
+								color: "#ffffff",
 								font: { family: "Inter", weight: 400, size: 24 },
-								padding: { bottom: 0 },
+								padding: { bottom: 20 },
 							},
 							tooltip: { enabled: true },
 							annotation: {
 								annotations: {
+									NPV: {
+										type: "box",
+										xMin: fairValue,
+										xMax: askingPrice,
+										borderColor: "transparent",
+										backgroundColor: "white",
+										yMax: -0.25,
+										yMin: -0.24,
+										borderWidth: 0,
+										borderColor: "white",
+										label: {
+											display: true,
+											content: [`NPV: ${moneyFormat(data.NPV)}`],
+											position: "middle",
+											xAdjust: 0,
+											yAdjust: -20,
+											rotation: 0,
+											color: data.NPV < 0 ? colorRed : colorGreen,
+											backgroundColor: "transparent",
+											font: { family: "Roboto Mono", weight: 400, size: 16 },
+											padding: 0,
+										},
+									},
 									underValue: {
 										type: "line",
 										xMin: fairValue * 0.9,
@@ -129,7 +158,7 @@ const Graph = ({ data }) => {
 											rotation: labelOffsetR,
 											color: colorGreen,
 											backgroundColor: "transparent",
-											font: { family: "Inter", weight: 600, size: 16 },
+											font: { family: "Roboto Mono", weight: 400, size: 16 },
 											padding: 0,
 										},
 									},
@@ -138,8 +167,7 @@ const Graph = ({ data }) => {
 										xMin: fairValue,
 										xMax: fairValue,
 										borderColor: "transparent",
-										borderDash: [8, 6],
-										borderWidth: 3,
+										borderWidth: 2,
 										label: {
 											display: true,
 											content: ["Fair"],
@@ -149,16 +177,64 @@ const Graph = ({ data }) => {
 											rotation: labelOffsetR,
 											color: colorYellow,
 											backgroundColor: "transparent",
-											font: { family: "Inter", weight: 600, size: 16 },
+											font: { family: "Roboto Mono", weight: 400, size: 16 },
 											padding: 0,
 										},
+										label: {
+											display: true,
+											content: ["Fair"],
+											position: "end",
+											xAdjust: labelOffsetX,
+											yAdjust: labelOffsetY,
+											rotation: labelOffsetR,
+											color: colorYellow,
+											backgroundColor: "transparent",
+											font: { family: "Roboto Mono", weight: 400, size: 16 },
+											padding: 0,
+										},
+									},
+									fairValueLine: {
+										type: "line",
+										xMin: fairValue,
+										xMax: fairValue,
+										yMin: 0.25,
+										yMax: -0.25,
+										borderColor: "white",
+										borderWidth: 2,
+										borderDash: [4, 8],
+										// label: {
+										// 	display: true,
+										// 	content: [`${moneyFormat(fairValue)}`],
+										// 	backgroundColor: "transparent",
+										// 	font: { family: "Roboto Mono", weight: 400, size: 16 },
+										// 	xAdjust: 10,
+										// 	rotation: 90,
+										// },
+									},
+									askingPriceLine: {
+										type: "line",
+										xMin: askingPrice,
+										xMax: askingPrice,
+										yMin: -0.1,
+										yMax: -0.25,
+										borderColor: "white",
+										borderWidth: 2,
+										borderDash: [4, 8],
+										// label: {
+										// 	display: true,
+										// 	content: [`${moneyFormat(fairValue)}`],
+										// 	backgroundColor: "transparent",
+										// 	font: { family: "Roboto Mono", weight: 400, size: 16 },
+										// 	xAdjust: 10,
+										// 	rotation: 90,
+										// },
 									},
 									overValue: {
 										type: "line",
 										xMin: fairValue * 1.1,
 										xMax: fairValue * 1.1,
 										borderColor: "transparent",
-										borderWidth: 2,
+										borderWidth: 0,
 										label: {
 											display: true,
 											content: ["Over"],
@@ -168,29 +244,7 @@ const Graph = ({ data }) => {
 											rotation: labelOffsetR,
 											color: colorRed,
 											backgroundColor: "transparent",
-											font: { family: "Inter", weight: 600, size: 16 },
-											padding: 0,
-										},
-									},
-									NPV: {
-										type: "line",
-										xMin: fairValue,
-										xMax: fairValue,
-										yMin: 0.2,
-										yMax: -0.2,
-										borderColor: "white",
-										borderDash: [10, 4],
-										borderWidth: 3,
-										label: {
-											display: true,
-											content: [`NPV ${moneyFormat(data.NPV)}`],
-											position: "end",
-											xAdjust: labelOffsetX,
-											yAdjust: -20,
-											rotation: 0,
-											color: data.NPV < 0 ? colorRed : colorGreen,
-											backgroundColor: "transparent",
-											font: { family: "Inter", weight: 600, size: 16 },
+											font: { family: "Roboto Mono", weight: 400, size: 16 },
 											padding: 0,
 										},
 									},
@@ -213,10 +267,11 @@ const Graph = ({ data }) => {
 										backgroundColor: colorBlack,
 										label: {
 											display: true,
-											content: ["Asking Price", `${moneyFormat(askingPrice)}`],
+											content: ["Investment", `${moneyFormat(askingPrice)}`],
 											position: "middle",
 											color: "white",
-											font: { family: "Inter", weight: 400, size: 16 },
+											font: { family: "Roboto Mono", weight: 400, size: 16 },
+											padding: 0,
 										},
 									},
 								},

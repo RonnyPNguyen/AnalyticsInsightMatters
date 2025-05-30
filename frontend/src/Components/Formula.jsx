@@ -219,16 +219,21 @@ function calculateFormula(data, market, retail) {
 	const WC5 = WC4 - WC0 / 5;
 	const NWC5 = WC5 - WC4;
 	const NetOCF5 = OCF5 - NWC5;
-	const TCF = (NetOCF5 * (GR + 0.01)) / (RRR - (GR + 0.01)); // Terminal Cash Flow
+	const TCF = (NetOCF5 * (GR + 0.01)) / (RRR - (GR + 0.01));
+	const ExitCF = NetOCF5 + TCF;
 	const DCF5 = (NetOCF5 + TCF) / Math.pow(1 + RRR, 5);
 
+	// Financial Analysis
+	const TotalGrossProfit = EBITDA1 + EBITDA2 + EBITDA3 + EBITDA4 + EBITDA5;
 	const TotalNetProfit = NI1 + NI2 + NI3 + NI4 + NI5;
 	const TotalRevenue = FR1 + FR2 + FR3 + FR4 + FR5;
-	const ProfitMargin = TotalNetProfit / TotalRevenue;
+	const GrossProfitMargin = TotalGrossProfit / TotalRevenue;
+	const NetProfitMargin = TotalNetProfit / TotalRevenue;
+	const FCFRate = Math.pow(ExitCF / NetOCF1, 1 / 5) - 1;
 	const TotalDCF = DCF1 + DCF2 + DCF3 + DCF4 + DCF5;
 	const NPV = TotalDCF - TotalInvestment;
-	const CashFlowCAGR = (NetOCF5 / NetOCF1) ** (1 / 5) - 1;
-	const valueEstimation = NPV / AskingPrice;
+	const ROI = NPV / TotalInvestment;
+	const valueEstimation = 1 - TotalInvestment / TotalDCF;
 	const valueVerdict =
 		valueEstimation > 0.1
 			? "Undervalued"
@@ -324,12 +329,16 @@ function calculateFormula(data, market, retail) {
 		NetOCF5,
 		TCF,
 		DCF5,
+		TotalGrossProfit,
 		TotalNetProfit,
 		TotalRevenue,
-		ProfitMargin,
+		GrossProfitMargin,
+		NetProfitMargin,
+		FCFRate,
 		TotalInvestment,
 		TotalDCF,
 		NPV,
+		ROI,
 		valueEstimation,
 		valueVerdict,
 		url,

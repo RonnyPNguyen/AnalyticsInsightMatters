@@ -18,12 +18,10 @@ const Navbar = () => {
 							to="/"
 							className="flex items-center space-x-2 transition duration-300"
 						>
-							<h1 className="text-white text-3xl font-coralpixels">
-								FinAlytics
-							</h1>
+							<h1 className="text-white text-3xl font-logo">FinAlytics</h1>
 						</NavLink>
 					</div>
-					<div className="hidden md:flex sm:space-x-4 md:space-x-8 lg:space-x-12 font-mont text-white text-base font-light text-center">
+					<div className="hidden md:flex sm:space-x-4 md:space-x-8 lg:space-x-12 font-nav text-white text-base font-light text-center">
 						<NavLink to="/" className={linkClass}>
 							Home
 						</NavLink>
@@ -34,7 +32,7 @@ const Navbar = () => {
 							About
 						</NavLink>
 					</div>
-					<div className="hidden md:flex w-40 h-8 justify-end items-center text-white text-base font-light font-mont">
+					<div className="hidden md:flex w-40 h-8 justify-end items-center text-white text-base font-light font-nav">
 						<div className="diagonal-gradient p-[2px] rounded-full w-fit transition duration-300">
 							<NavLink
 								to="/login"
@@ -65,7 +63,7 @@ const Navbar = () => {
 				leaveFrom="opacity-100 translate-y-0"
 				leaveTo="opacity-0 -translate-y-2"
 			>
-				<div className="fixed top-16 left-0 w-full z-50 md:hidden bg-black px-8 py-4 space-y-4 font-mont text-white text-base font-light">
+				<div className="fixed top-16 left-0 w-full z-50 md:hidden bg-black px-8 py-4 space-y-4 font-nav text-white text-base font-light">
 					<NavLink
 						to="/"
 						className="block hover:bg-white hover:text-black rounded-2xl px-4 py-2 transition duration-300"

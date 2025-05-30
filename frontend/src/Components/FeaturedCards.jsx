@@ -27,13 +27,13 @@ const FeaturedCards = ({ numberOfFeatured = 4 }) => {
 
 	return (
 		<section className="py-10">
-			<p className="text-center text-white font-inter font-thin text-4xl">
+			<p className="text-center text-white font-writing font-thin text-4xl pb-10">
 				Featured Listings
 			</p>
 			{loading ? (
 				<Spinner loading={loading} />
 			) : (
-				<div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-5 py-5 px-5">
+				<div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-5 px-5">
 					{RecentOffers.map((offer) => (
 						<Card key={offer.id} offer={offer} className="" />
 					))}

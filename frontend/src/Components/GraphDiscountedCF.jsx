@@ -6,6 +6,10 @@ const GraphDiscountedCF = ({ data }) => {
 	const colorGreen = "#2DC97E";
 	const colorRed = "#E64141";
 	const colorBlue = "#0566FC";
+	const colorYellow = "#F2C94C";
+	const colorPurple = "#9B51E0";
+	const colorOrange = "#f3722c";
+	const colorAzure = "#2F80ED";
 	const colorBackground = "#111111";
 	const colorWhite = "#FFFFFF";
 	const moneyFormat = (number) => {
@@ -31,7 +35,7 @@ const GraphDiscountedCF = ({ data }) => {
 								const ctx = context.chart.ctx;
 								const gradient = ctx.createLinearGradient(0, 0, 0, 400);
 								gradient.addColorStop(0, colorRed);
-								gradient.addColorStop(1, colorRed + "50");
+								gradient.addColorStop(1, "transparent");
 								return gradient;
 							},
 							fill: true,
@@ -50,8 +54,8 @@ const GraphDiscountedCF = ({ data }) => {
 							backgroundColor: (context) => {
 								const ctx = context.chart.ctx;
 								const gradient = ctx.createLinearGradient(0, 0, 0, 400);
-								gradient.addColorStop(0, colorGreen + "99");
-								gradient.addColorStop(1, colorGreen + "20");
+								gradient.addColorStop(0, colorGreen);
+								gradient.addColorStop(1, "transparent");
 								return gradient;
 							},
 							fill: true,
@@ -70,25 +74,31 @@ const GraphDiscountedCF = ({ data }) => {
 						},
 						title: {
 							display: true,
-							text: "Cash Flow Analysis",
+							text: "Projected Cash Flows",
 							color: "#ffffff",
 							font: { family: "Inter", weight: 400, size: 24 },
-							padding: { bottom: 10 },
+							padding: { bottom: 20 },
 						},
 					},
 					scales: {
 						x: {
-							font: { family: "Mono", weight: 200, size: 12 },
-							ticks: { color: "#ffffff" },
-							padding: 10,
+							ticks: {
+								color: "#ffffff",
+								font: { family: "Roboto Mono", weight: 100, size: 12 },
+								padding: 10,
+							},
+							font: { family: "Roboto Mono", weight: 100, size: 12 },
+							padding: 0,
 						},
 						y: {
 							ticks: {
 								color: "#ffffff",
-								font: { family: "Mono", weight: 200, size: 12 },
+								font: { family: "Roboto Mono", weight: 100, size: 12 },
 								padding: 10,
 							},
-							grid: { color: "#333333" },
+							font: { family: "Roboto Mono", weight: 100, size: 12 },
+							padding: 0,
+							grid: { color: "#333" },
 							beginAtZero: true,
 						},
 					},
