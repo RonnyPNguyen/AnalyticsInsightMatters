@@ -6,7 +6,7 @@ function Hero() {
 			<p className="text-white font-writing font-thin text-6xl py-10 text-center">
 				Business. Analyzed. Fast.
 			</p>
-			<p className="text-white font-inter font-thin text-2xl py-5 text-center">
+			<p className="text-white font-writing font-thin text-2xl py-5 text-center">
 				Selected business listings across all platforms will be analyzed using
 				our customized financial models to quickly assess their profitability
 				and feasibility.

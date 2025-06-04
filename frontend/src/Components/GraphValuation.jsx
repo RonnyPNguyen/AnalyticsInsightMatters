@@ -52,7 +52,7 @@ const Graph = ({ data }) => {
 	const maxValue = Math.ceil((fairValue * 1.5) / 50000) * 50000;
 	return (
 		<>
-			<div className="py-2 h-[40vh]">
+			<div className="h-[40vh]">
 				<Bar
 					className="p-4 bg-[#111111] rounded-md shadow-lg"
 					data={{
@@ -197,11 +197,11 @@ const Graph = ({ data }) => {
 										type: "line",
 										xMin: fairValue,
 										xMax: fairValue,
-										yMin: 0.25,
+										yMin: 0.2,
 										yMax: -0.25,
 										borderColor: "white",
 										borderWidth: 2,
-										borderDash: [4, 8],
+										// borderDash: [4, 8],
 										// label: {
 										// 	display: true,
 										// 	content: [`${moneyFormat(fairValue)}`],
@@ -219,7 +219,7 @@ const Graph = ({ data }) => {
 										yMax: -0.25,
 										borderColor: "white",
 										borderWidth: 2,
-										borderDash: [4, 8],
+										// borderDash: [4, 8],
 										// label: {
 										// 	display: true,
 										// 	content: [`${moneyFormat(fairValue)}`],

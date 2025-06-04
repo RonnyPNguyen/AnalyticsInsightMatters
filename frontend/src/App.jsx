@@ -11,6 +11,7 @@ import AboutPage from "./pages/AboutPage";
 import ListingsPage from "./pages/ListingsPage";
 import ListingPage, { offerLoader } from "./pages/ListingPage";
 import DocumentationPage from "./pages/DocumentationPage";
+import AddOfferPage from "./pages/AddOfferPage";
 import LoginPage from "./pages/LoginPage";
 
 const router = createBrowserRouter(
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
 			<Route path="/listings" element={<ListingsPage />}></Route>
 			<Route path="/login" element={<LoginPage />}></Route>
 			<Route path="/documentation" element={<DocumentationPage />}></Route>
+			<Route path="/newlisting" element={<AddOfferPage />}></Route>
 		</Route>
 	)
 );

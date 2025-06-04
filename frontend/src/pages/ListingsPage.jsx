@@ -2,6 +2,7 @@ import { useState, useEffect, use } from "react";
 import Card from "../components/Card";
 import Spinner from "../components/Spinner";
 import Disclaimer from "../components/Disclaimer";
+import NewListing from "../components/NewListing";
 
 const ListingsPage = () => {
 	const [offers, setOffers] = useState([]);
@@ -30,18 +31,19 @@ const ListingsPage = () => {
 		.sort((a, b) => b.AskingPrice - a.AskingPrice);
 
 	const [view, setView] = useState("latest");
-	const loadedOffers = view === "latest" ? latestOffers : biggestOffers;
+	const sortedOffers = view === "latest" ? latestOffers : biggestOffers;
 
 	return (
-		<div className="lg:px-40">
-			<div className="font-writing text-white text-center pt-20">
-				<p className="text-4xl font-light py-0">Business Listings</p>
+		<section className="2xl:px-30">
+			<div className="h-8"></div>
+			<div className="font-writing text-white text-center h-60 flex flex-col justify-center">
+				<p className="text-4xl font-light">Business Listings</p>
 				<p className="text-base font-light text-gray-500">
 					Explore our selected offers for sale.
 				</p>
 				<Disclaimer />
 			</div>
-			<div className="font-writing flex flex-row justify-center py-2">
+			<div className="font-writing flex flex-row justify-center h-8">
 				<p className="py-1 text-white font-thin mr-2">Sort by:</p>
 				<select
 					value={view}
@@ -52,16 +54,17 @@ const ListingsPage = () => {
 					<option value="biggest">Asking Price</option>
 				</select>
 			</div>
-			{loading ? (
-				<Spinner loading={loading} />
-			) : (
-				<div className="grid md:grid-cols-2 grid-cols-1 gap-6 px-6">
-					{loadedOffers.map((offer) => (
-						<Card key={offer.id} offer={offer} className="" />
+			{offers ? (
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-20 p-10">
+					{sortedOffers.map((offer) => (
+						<Card key={offer.id} data={offer} />
 					))}
 				</div>
+			) : (
+				Spinner({ loading: loading })
 			)}
-		</div>
+			<NewListing />
+		</section>
 	);
 };
 

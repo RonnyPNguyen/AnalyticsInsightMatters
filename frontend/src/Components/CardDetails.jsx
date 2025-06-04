@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import Formula from "./Formula";
 
-const CardDetails = ({ offer }) => {
+const CardDetails = ({ data }) => {
 	const [bd, setBd] = useState(null);
 
 	const moneyFormat = (number) =>
@@ -29,15 +29,15 @@ const CardDetails = ({ offer }) => {
 
 	return (
 		<div>
-			<Formula data={offer} onResult={setBd} />
+			<Formula data={data} onResult={setBd} />
 			<div className="font-tabular flex justify-between items-center py-2">
 				<div>
-					<p className="text-base font-semibold">{offer.BusinessName}</p>
+					<p className="text-base font-semibold">{data.BusinessName}</p>
 					<div className="text-xs flex items-center space-x-2 text-gray-400">
 						<FaMapMarkerAlt className="text-red-500" />
 						<p className="text-left">
-							{`${offer.Suburb}, ${getStateAbbreviation(offer.State)} ${
-								offer.Postcode
+							{`${data.Suburb}, ${getStateAbbreviation(data.State)} ${
+								data.Postcode
 							}`}
 						</p>
 					</div>
@@ -45,7 +45,7 @@ const CardDetails = ({ offer }) => {
 				<div className="font-tabular text-right">
 					<p className="text-xs text-gray-400">Asking Price</p>
 					<p className="text-base">
-						{`$${moneyFormat(offer.AskingPrice)} ${
+						{`$${moneyFormat(data.AskingPrice)} ${
 							bd?.SavIncluded === 0 ? "+ SAV" : ""
 						}`}{" "}
 						{bd?.GstIncluded === 0 ? "+ GST" : ""}
@@ -134,7 +134,7 @@ const CardDetails = ({ offer }) => {
 							</Link>
 						</button>
 						<button className="bg-[#2A3439] hover:bg-white hover:text-black text-white font-tabular font-semibold px-3 py-1 rounded-md">
-							<Link to={`/listings/${offer.id}`}>Analyze</Link>
+							<Link to={`/listings/${data.id}`}>Analyze</Link>
 						</button>
 					</div>
 				</div>

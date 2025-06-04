@@ -14,18 +14,21 @@ const AboutPage = () => {
 			<section className="text-center text-white bg-[url('/AboutPageBanner.jpg')] bg-cover bg-center">
 				<div className="bg-black/50 backdrop-blur-xs">
 					<div className="p-8 md:w-200 md:mx-auto">
-						<p className="py-8 text-4xl font-light">More than just a tool</p>
-						<p className="py-4 text-base font-thin text-justify">
-							FinAlytics Project started with a simple idea: To bridge the gap
-							between traditional valuation models and the real-world complexity
-							of business listings.
+						<p className="text-white font-writing font-thin text-6xl py-10 text-center">
+							More Than A Tool
+						</p>
+						<p className="text-white font-writing font-thin text-2xl py-5 text-center">
+							Started with a simple idea: To bridge the gap between traditional
+							valuation models and the real-world complexity of business
+							listings. Using advanced data analytics, FinAlytics aims to
+							provide a more comprehensive valuation model to boost the
+							screening process for investors.
 						</p>
 						<p className="py-4 text-base font-thin text-justify">
-							Using a custom-built Discounted Cash Flow formula, FinAlytics
-							offers realistic, flexible, and data-driven valuations. It also
-							blends in real-time economic indicators such as CPI, Wage Indexes,
-							and Industry Metrics, to reflect market movement and draw deeper
-							insight.
+							Using a custom-built DCF formula, FinAlytics offers realistic,
+							flexible, and data-driven financial analysis. The model is
+							directly connected to economic database through APIs to reflect
+							market movement and draw real-time insight.
 						</p>
 					</div>
 				</div>
@@ -45,14 +48,14 @@ const AboutPage = () => {
 						between these listings. Key information are conveniently left out,
 						or simply unavailable, making it difficult to compare and analyze.
 					</p>
-					<p className="py-4 text-base font-thin  text-justify">
+					<p className="py-4 text-base font-thin text-justify">
 						Some businesses were too good to be true, meaning some factors have
 						not been taken into account. Hence the idea to incorporate hidden
 						factors into the valuation model, such as owner salary, working
 						capital, SAV, etc, was born. This way, the valuation can be more
 						accurate and reflect the true value of the business.
 					</p>
-					<p className="py-4 text-base font-thin  text-justify">
+					<p className="py-4 text-base font-thin text-justify">
 						During development, this project has the potential to evolve into a
 						full-scale fintech product/service that provides buyers, sellers,
 						and analysts with market-adjusted business valuations. It can
@@ -68,7 +71,7 @@ const AboutPage = () => {
 								Ronny is a Business Analytics graduate from Western Sydney
 								University, he wants to apply learnt techniques to address real
 								problems. With a major in Finance and passion for Data, he aims
-								to make a creative solution for a niche market.
+								to make a creative solution for fin-tech niche market.
 							</p>
 							<p className="py-4 text-base font-thin  text-justify">
 								Since this is a one-man project, please cut him some slack if

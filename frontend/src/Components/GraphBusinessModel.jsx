@@ -20,7 +20,7 @@ const GraphBusinessModel = ({ data }) => {
 	};
 
 	return (
-		<div className="py-2 lg:h-[60vh] h-[40vh]">
+		<div className="lg:h-[60vh] h-[40vh]">
 			<Bar
 				className="p-4 bg-[#111111] rounded-md shadow-lg"
 				data={{
