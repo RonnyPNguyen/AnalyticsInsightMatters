@@ -4,7 +4,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import Formula from "./Formula";
 
 const CardDetails = ({ data }) => {
-	const [bd, setBd] = useState(null);
+	const [output, setOutput] = useState(null);
 
 	const moneyFormat = (number) =>
 		new Intl.NumberFormat("en-AU", { maximumFractionDigits: 0 }).format(number);
@@ -29,7 +29,7 @@ const CardDetails = ({ data }) => {
 
 	return (
 		<div>
-			<Formula data={data} onResult={setBd} />
+			<Formula data={data} onResult={setOutput} />
 			<div className="font-tabular flex justify-between items-center py-2">
 				<div>
 					<p className="text-base font-semibold">{data.BusinessName}</p>
@@ -46,23 +46,23 @@ const CardDetails = ({ data }) => {
 					<p className="text-xs text-gray-400">Asking Price</p>
 					<p className="text-base">
 						{`$${moneyFormat(data.AskingPrice)} ${
-							bd?.SavIncluded === 0 ? "+ SAV" : ""
+							output?.SavIncluded === 0 ? "+ SAV" : ""
 						}`}{" "}
-						{bd?.GstIncluded === 0 ? "+ GST" : ""}
+						{output?.GstIncluded === 0 ? "+ GST" : ""}
 					</p>
 				</div>
 			</div>
-			{bd ? (
+			{output ? (
 				<div className="font-tabular">
 					<div className="py-2 flex justify-between space-x-2 text-xs text-center">
 						<div className="bg-[#2A3439] p-2 rounded-md text-orange-500">
-							Growth: {percentFormat(bd.GR)}
+							Growth: {percentFormat(output.GR)}
 						</div>
 						<div className="bg-[#2A3439] p-2 rounded-md text-purple-500">
-							Return: {percentFormat(bd.RRR)}
+							Return: {percentFormat(output.RRR)}
 						</div>
 						<div className="bg-[#2A3439] p-2 rounded-md text-blue-500">
-							{bd.employmentType}
+							{output.employmentType}
 						</div>
 					</div>
 					<div className="text-xs font-light py-2 px-2">
@@ -70,36 +70,36 @@ const CardDetails = ({ data }) => {
 							<p className="py-1">Annual Revenue: {}</p>
 							<div className="flex justify-between">
 								<p>$</p>
-								<p>{moneyFormat(bd.TotalRevenue / 5)}</p>
+								<p>{moneyFormat(output.TotalRevenue / 5)}</p>
 							</div>
 						</div>
 						<div className="flex justify-between">
 							<p className="py-1">Annual Net Profit:</p>
 							<div className="flex justify-between">
 								<p>$</p>
-								<p>{moneyFormat(bd.TotalNetProfit / 5)}</p>
+								<p>{moneyFormat(output.TotalNetProfit / 5)}</p>
 							</div>
 						</div>
 						<div className="flex justify-between">
 							<p className="py-1">Profit Margin:</p>
 							<div className="flex justify-between">
-								<p>{percentFormat(bd.NetProfitMargin)}</p>
+								<p>{percentFormat(output.NetProfitMargin)}</p>
 							</div>
 						</div>
 						{/* <div className="flex justify-between">
 							<p className="py-1">
-								Total Investment: {bd?.SavIncluded === 0 ? "(+ est. SAV)" : ""}
+								Total Investment: {output?.SavIncluded === 0 ? "(+ est. SAV)" : ""}
 							</p>
 							<div className="flex justify-between">
 								<p>$</p>
-								<p>{moneyFormat(bd.TotalInvestment)}</p>
+								<p>{moneyFormat(output.TotalInvestment)}</p>
 							</div>
 						</div>
 						<div className="flex justify-between">
 							<p className="font-light py-1">Total Discounted Cash Flow:</p>
 							<div className="flex justify-between">
 								<p>$</p>
-								<p>{moneyFormat(bd.TotalDCF)}</p>
+								<p>{moneyFormat(output.TotalDCF)}</p>
 							</div>
 						</div> */}
 					</div>
@@ -107,29 +107,31 @@ const CardDetails = ({ data }) => {
 						<div className="flex justify-between">
 							<p className="">Net Present Value: </p>
 							<p
-								className={`${bd.NPV < 0 ? "text-red-600" : "text-green-600"} `}
+								className={`${
+									output.NPV < 0 ? "text-red-600" : "text-green-600"
+								} `}
 							>
-								${moneyFormat(bd.NPV)}
+								${moneyFormat(output.NPV)}
 							</p>
 						</div>
 						<div className="flex justify-between">
 							<p className="">Estimation: </p>
 							<p
 								className={`${
-									bd.valueEstimation > 0.1
+									output.valueEstimation > 0.1
 										? "text-green-600"
-										: bd.valueEstimation > -0.1
+										: output.valueEstimation > -0.1
 										? "text-yellow-500"
 										: "text-red-600"
 								}`}
 							>
-								{bd.valueVerdict}
+								{output.valueVerdict}
 							</p>
 						</div>
 					</div>
 					<div className="text-base flex justify-between text-gray-400 pt-4">
 						<button className="bg-[#2A3439] hover:bg-white hover:text-black text-white font-tabular font-semibold px-3 py-1 rounded-md">
-							<Link to={bd.url} target="_blank" rel="noopener noreferrer">
+							<Link to={output.url} target="_blank" rel="noopener noreferrer">
 								Source
 							</Link>
 						</button>

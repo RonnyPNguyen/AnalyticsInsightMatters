@@ -43,9 +43,9 @@ const ListingPage = () => {
 			</div>
 			<div className="h-8"></div>
 			{data ? (
-				<div className="p-10 grid grid-cols-1 gap-10">
+				<div className="p-10 grid grid-cols-1 gap-8">
 					<div className="text-white font-writing text-left">
-						<div className="bg-[#111111] px-8 rounded-md">
+						<div className="bg-[#111111] px-8 rounded-md p-4 grid grid-cols-1 gap-2">
 							<p className="font-light text-2xl">
 								Asking Price: {moneyFormat(offer.AskingPrice)}
 								{offer.GSTIncluded === 1 ? "" : " + GST"}

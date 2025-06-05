@@ -248,18 +248,24 @@ const Graph = ({ data }) => {
 											padding: 0,
 										},
 									},
-									askingPrice: {
+									askingPriceBar: {
 										type: "box",
 										xMin: 0,
 										xMax: askingPrice,
 										yMax: -0.1,
 										yMin: 0.1,
 										borderWidth: 0,
-										backgroundColor: colorBlack + "99",
+										backgroundColor: (context) => {
+											const ctx = context.chart.ctx;
+											const gradient = ctx.createLinearGradient(0, 0, 0, 800);
+											gradient.addColorStop(1, "black");
+											gradient.addColorStop(0, "transparent");
+											return gradient;
+										},
 									},
 									askingPriceTip: {
 										type: "box",
-										xMin: askingPrice - maxValue * 0.3,
+										xMin: askingPrice - maxValue * 0.4,
 										xMax: askingPrice,
 										yMax: -0.1,
 										yMin: 0.1,

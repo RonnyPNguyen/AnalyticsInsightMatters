@@ -13,27 +13,21 @@ const AboutPage = () => {
 		<>
 			<section className="text-center text-white bg-[url('/AboutPageBanner.jpg')] bg-cover bg-center">
 				<div className="bg-black/50 backdrop-blur-xs">
-					<div className="p-8 md:w-200 md:mx-auto">
+					<div className="p-8 lg:w-250 md:mx-auto">
 						<p className="text-white font-writing font-thin text-6xl py-10 text-center">
 							More Than A Tool
 						</p>
-						<p className="text-white font-writing font-thin text-2xl py-5 text-center">
+						<p className="text-white font-writing font-thin text-2xl py-5 text-justify">
 							Started with a simple idea: To bridge the gap between traditional
 							valuation models and the real-world complexity of business
-							listings. Using advanced data analytics, FinAlytics aims to
-							provide a more comprehensive valuation model to boost the
-							screening process for investors.
-						</p>
-						<p className="py-4 text-base font-thin text-justify">
-							Using a custom-built DCF formula, FinAlytics offers realistic,
-							flexible, and data-driven financial analysis. The model is
-							directly connected to economic database through APIs to reflect
-							market movement and draw real-time insight.
+							listings. By incorporating economic factors from real-time
+							database, FinAlytics provides a comprehensive valuation model to
+							streamline the screening process for all investors.
 						</p>
 					</div>
 				</div>
 			</section>
-			<div className="pt-16 bg-black text-white font-writing px-8 md:w-200 md:mx-auto">
+			<div className="pt-16 bg-black text-white font-writing px-8 lg:w-250 md:mx-auto">
 				<section className="text-center py-8 bg-neutral-900 rounded-2xl">
 					<p className="pb-4 text-2xl font-light">
 						Explore the customized model
@@ -73,7 +67,7 @@ const AboutPage = () => {
 								problems. With a major in Finance and passion for Data, he aims
 								to make a creative solution for fin-tech niche market.
 							</p>
-							<p className="py-4 text-base font-thin  text-justify">
+							<p className="py-4 text-base font-thin text-justify">
 								Since this is a one-man project, please cut him some slack if
 								you find any bugs or issues. It also shows his project
 								management skills, as he is the sole developer, UX/UI designer,
@@ -81,6 +75,49 @@ const AboutPage = () => {
 								the heavy loading). If you are a recruiter reading this, please
 								give him a chance to put his skills for good.
 							</p>
+							<div className="w-full text-left">
+								<p className="py-2 text-xl font-base">
+									Other Projects by Ronny:
+								</p>
+								<ul className="font-writing font-light">
+									<li>
+										<p className="text-base font-bold">
+											Viz Venture
+											<span className="hover:underline text-blue-500 font-light">
+												<Link
+													to="https://viz-venture.com"
+													target="_blank"
+													rel="noopener noreferrer"
+												>
+													: viz-venture.com
+												</Link>
+											</span>
+										</p>
+										<p className=" text-base font-thin text-justify">
+											A Data Visualization project covering topics across
+											different industries
+										</p>
+									</li>
+									<li>
+										<p className="text-base font-bold">
+											Handy Sparkle
+											<span className="hover:underline text-blue-500 font-light">
+												<Link
+													to="https://handysparkle.com.au"
+													target="_blank"
+													rel="noopener noreferrer"
+												>
+													: handysparkle.com.au
+												</Link>
+											</span>
+										</p>
+										<p className=" text-base font-thin text-justify">
+											A Simple Landing Page for local cleaning business in Dee
+											Why, NSW
+										</p>
+									</li>
+								</ul>
+							</div>
 						</div>
 						<div className="text-white font-inter bg-[url('/StakeHolderCardBg3.jpg')] bg-cover bg-center rounded-2xl">
 							<div className="flex flex-col items-center justify-center backdrop-blur-xs p-3 rounded-2xl w-50">
