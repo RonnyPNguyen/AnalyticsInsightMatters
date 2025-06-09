@@ -1,8 +1,19 @@
+import requests
 import json
 import boto3
 
 def lambda_handler(event, context):
     # Your code goes here, wrapped in this function
+    cpiUrl = "https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.10001.10.50.Q?lastNObservations=20&detail=dataonly"
+    wpiUrl = "https://data.api.abs.gov.au/rest/data/ABS,WPI,1.2.0/3.THRPIB.2.TOT.10.AUS.Q?lastNObservations=20&detail=dataonly" 
+    rentUrl = "https://data.api.abs.gov.au/rest/data/ABS,CPI,1.1.0/3.30014.10.50.Q?lastNObservations=20&detail=dataonly"
+    saleUrl = "https://Url.api.abs.gov.au/rest/data/ABS,AUSTRALIAN_INDUSTRY,1.1.0/INCSALGDSSERV..1..A?lastNObservations=5&detail=dataonly"
+    cogsUrl = "https://Url.api.abs.gov.au/rest/data/ABS,AUSTRALIAN_INDUSTRY,1.1.0/PURCHASES..1..A?lastNObservations=5&detail=dataonly"
+
+    headers = {
+        "Accept": "application/vnd.sdmx.data+json"  
+    }
+
     def fetch_raw_json(name, url):
         response = requests.get(url, headers=headers)
         if response.status_code == 200:
