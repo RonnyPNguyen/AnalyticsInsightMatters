@@ -10,7 +10,7 @@ const ListingsPage = () => {
 	useEffect(() => {
 		const fetchOffers = async () => {
 			try {
-				const res = await fetch("/api/offers");
+				const res = await fetch("");
 				const data = await res.json();
 				setOffers(data);
 			} catch (error) {

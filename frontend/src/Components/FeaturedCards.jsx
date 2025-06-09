@@ -10,7 +10,9 @@ const FeaturedCards = ({ numberOfFeatured = 4 }) => {
 	useEffect(() => {
 		const fetchOffers = async () => {
 			try {
-				const res = await fetch("/api/offers");
+				const res = await fetch(
+					"https://busyanalytics.s3.us-east-1.amazonaws.com/data/listingsJun.json"
+				);
 				const data = await res.json();
 				setOffers(data);
 				console.log("Data fetched:");
@@ -27,7 +29,7 @@ const FeaturedCards = ({ numberOfFeatured = 4 }) => {
 
 	return (
 		<section className="2xl:px-30">
-			<p className="text-center text-white font-writing font-thin text-4xl pb-10">
+			<p className="text-center text-white font-writing font-thin text-4xl py-10">
 				Featured Listings
 			</p>
 			{loading ? (

@@ -32,12 +32,12 @@ const CardDetails = ({ data }) => {
 			<Formula data={data} onResult={setOutput} />
 			<div className="font-tabular flex justify-between items-center py-2">
 				<div>
-					<p className="text-base font-semibold">{data.BusinessName}</p>
+					<p className="text-base font-semibold">{output.BusinessName}</p>
 					<div className="text-xs flex items-center space-x-2 text-gray-400">
 						<FaMapMarkerAlt className="text-red-500" />
 						<p className="text-left">
-							{`${data.Suburb}, ${getStateAbbreviation(data.State)} ${
-								data.Postcode
+							{`${output.Suburb}, ${getStateAbbreviation(output.State)} ${
+								output.Postcode
 							}`}
 						</p>
 					</div>
@@ -45,7 +45,7 @@ const CardDetails = ({ data }) => {
 				<div className="font-tabular text-right">
 					<p className="text-xs text-gray-400">Asking Price</p>
 					<p className="text-base">
-						{`$${moneyFormat(data.AskingPrice)} ${
+						{`$${moneyFormat(output.AskingPrice)} ${
 							output?.SavIncluded === 0 ? "+ SAV" : ""
 						}`}{" "}
 						{output?.GstIncluded === 0 ? "+ GST" : ""}
