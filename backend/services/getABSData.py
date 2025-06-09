@@ -133,10 +133,9 @@ def lambda_handler(event, context):
     "rentalYieldByCapital": rentalYields,
     },
 
-    # Replace the last line with:
     s3 = boto3.client('s3')
     s3.put_object(
-        Bucket='your-s3-bucket-name',
+        Bucket='busy-analytics-server',  # replace with your bucket name
         Key='data/marketData.json',  # or any path inside the bucket
         Body=json.dumps(marketData, indent=2),
         ContentType='application/json'
