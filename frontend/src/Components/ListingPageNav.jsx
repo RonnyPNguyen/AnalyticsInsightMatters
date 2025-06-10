@@ -4,7 +4,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const ListingPageNav = ({ data }) => {
 	return (
-		<div className="flex justify-between items-center text-base font-nav px-4 h-8">
+		<div className="flex justify-between items-center text-base font-nav px-4 h-8 text-white">
 			<Link
 				to="/listings"
 				className="p-1 w-fit flex items-center rounded-md hover:bg-white hover:text-black transition duration-300 ease-in-out"
@@ -13,7 +13,7 @@ const ListingPageNav = ({ data }) => {
 				<p>Back to Listings</p>
 			</Link>
 			<Link
-				to={data.URL}
+				to={data.listingUrl}
 				target="_blank"
 				rel="noopener noreferrer"
 				className="p-1 w-fit flex items-center rounded-md hover:bg-white hover:text-black transition duration-300 ease-in-out"

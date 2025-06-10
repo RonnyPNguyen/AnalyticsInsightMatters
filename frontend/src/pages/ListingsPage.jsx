@@ -1,34 +1,44 @@
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import Card from "../components/Card";
 import Spinner from "../components/Spinner";
 import Disclaimer from "../components/Disclaimer";
 import NewListing from "../components/NewListing";
 
 const ListingsPage = () => {
-	const [offers, setOffers] = useState([]);
 	const [loading, setLoading] = useState(true);
+	const [listingsData, setListingsData] = useState([]);
+	const [marketData, setMarketData] = useState();
 	useEffect(() => {
-		const fetchOffers = async () => {
+		const serverData = async () => {
 			try {
-				const res = await fetch("");
-				const data = await res.json();
-				setOffers(data);
+				const [listingsRes, marketRes] = await Promise.all([
+					fetch(
+						"https://busy-analytics-server.s3.us-east-1.amazonaws.com/data/listingsData.json"
+					),
+					fetch(
+						"https://busy-analytics-server.s3.us-east-1.amazonaws.com/data/marketData.json"
+					),
+				]);
+				const listingsJson = await listingsRes.json();
+				const marketJson = await marketRes.json();
+
+				setListingsData(listingsJson);
+				setMarketData(marketJson);
 			} catch (error) {
-				console.error("Error fetching offers:", error);
+				console.error("Error fetching data:", error);
 			} finally {
 				setLoading(false);
 			}
 		};
-		fetchOffers();
+		serverData();
 	}, []);
 
-	const latestOffers = offers
+	const latestOffers = listingsData
 		.slice()
-		.sort((a, b) => new Date(b.DateAdded) - new Date(a.DateAdded));
-
+		.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded));
 	const biggestOffers = latestOffers
 		.slice()
-		.sort((a, b) => b.AskingPrice - a.AskingPrice);
+		.sort((a, b) => b.askingPrice - a.askingPrice);
 
 	const [view, setView] = useState("latest");
 	const sortedOffers = view === "latest" ? latestOffers : biggestOffers;
@@ -54,10 +64,10 @@ const ListingsPage = () => {
 					<option value="biggest">Asking Price</option>
 				</select>
 			</div>
-			{offers ? (
+			{sortedOffers ? (
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-20 p-10">
 					{sortedOffers.map((offer) => (
-						<Card key={offer.id} data={offer} />
+						<Card key={offer.id} listingsData={offer} marketData={marketData} />
 					))}
 				</div>
 			) : (

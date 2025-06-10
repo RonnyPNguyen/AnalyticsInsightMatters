@@ -9,7 +9,7 @@ export default defineConfig({
 		port: 3000,
 		proxy: {
 			"/api": {
-				target: "http://localhost:8000",
+				target: "https://busy-analytics-server.s3.us-east-1.amazonaws.com",
 				changeOrigin: true,
 				rewrite: (path) => path.replace(/^\/api/, ""),
 			},

@@ -3,16 +3,14 @@ import { Link } from "react-router-dom";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import Formula from "./Formula";
 
-const CardDetails = ({ data }) => {
-	const [output, setOutput] = useState(null);
-
+const CardDetails = ({ listingsData, marketData }) => {
+	const [output, setOutput] = useState([]);
 	const moneyFormat = (number) =>
 		new Intl.NumberFormat("en-AU", { maximumFractionDigits: 0 }).format(number);
 
 	const percentFormat = (number) =>
 		typeof number === "number" ? `${(number * 100).toFixed(2)}%` : "...";
 
-	// Map of Australian state full names to abbreviations
 	const stateAbbreviations = {
 		"New South Wales": "NSW",
 		Victoria: "VIC",
@@ -29,26 +27,30 @@ const CardDetails = ({ data }) => {
 
 	return (
 		<div>
-			<Formula data={data} onResult={setOutput} />
+			<Formula
+				listingsData={listingsData}
+				marketData={marketData}
+				onResult={setOutput}
+			/>
 			<div className="font-tabular flex justify-between items-center py-2">
 				<div>
-					<p className="text-base font-semibold">{output.BusinessName}</p>
+					<p className="text-base font-semibold">{listingsData.businessName}</p>
 					<div className="text-xs flex items-center space-x-2 text-gray-400">
 						<FaMapMarkerAlt className="text-red-500" />
 						<p className="text-left">
-							{`${output.Suburb}, ${getStateAbbreviation(output.State)} ${
-								output.Postcode
-							}`}
+							{`${listingsData.locationSuburb}, ${getStateAbbreviation(
+								listingsData.locationState
+							)} ${listingsData.locationPostCode}`}
 						</p>
 					</div>
 				</div>
 				<div className="font-tabular text-right">
 					<p className="text-xs text-gray-400">Asking Price</p>
 					<p className="text-base">
-						{`$${moneyFormat(output.AskingPrice)} ${
-							output?.SavIncluded === 0 ? "+ SAV" : ""
+						{`$${moneyFormat(listingsData.askingPrice)} ${
+							listingsData?.savIncluded === 0 ? "+ SAV" : ""
 						}`}{" "}
-						{output?.GstIncluded === 0 ? "+ GST" : ""}
+						{listingsData?.gstIncluded === 0 ? "+ GST" : ""}
 					</p>
 				</div>
 			</div>
@@ -62,7 +64,7 @@ const CardDetails = ({ data }) => {
 							Return: {percentFormat(output.RRR)}
 						</div>
 						<div className="bg-[#2A3439] p-2 rounded-md text-blue-500">
-							{output.employmentType}
+							{output.businessModel}
 						</div>
 					</div>
 					<div className="text-xs font-light py-2 px-2">
@@ -86,9 +88,10 @@ const CardDetails = ({ data }) => {
 								<p>{percentFormat(output.NetProfitMargin)}</p>
 							</div>
 						</div>
-						{/* <div className="flex justify-between">
+						<div className="flex justify-between">
 							<p className="py-1">
-								Total Investment: {output?.SavIncluded === 0 ? "(+ est. SAV)" : ""}
+								Total Investment:{" "}
+								{output?.SavIncluded === 0 ? "(+ est. SAV)" : ""}
 							</p>
 							<div className="flex justify-between">
 								<p>$</p>
@@ -101,7 +104,7 @@ const CardDetails = ({ data }) => {
 								<p>$</p>
 								<p>{moneyFormat(output.TotalDCF)}</p>
 							</div>
-						</div> */}
+						</div>
 					</div>
 					<div className="text-base p-2 bg-[#2A3439] rounded-md text-center font-tabular font-normal">
 						<div className="flex justify-between">
@@ -131,12 +134,16 @@ const CardDetails = ({ data }) => {
 					</div>
 					<div className="text-base flex justify-between text-gray-400 pt-4">
 						<button className="bg-[#2A3439] hover:bg-white hover:text-black text-white font-tabular font-semibold px-3 py-1 rounded-md">
-							<Link to={output.url} target="_blank" rel="noopener noreferrer">
+							<Link
+								to={output.listingUrl}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Source
 							</Link>
 						</button>
 						<button className="bg-[#2A3439] hover:bg-white hover:text-black text-white font-tabular font-semibold px-3 py-1 rounded-md">
-							<Link to={`/listings/${data.id}`}>Analyze</Link>
+							<Link to={`/listings/${listingsData.id}`}>Analyze</Link>
 						</button>
 					</div>
 				</div>

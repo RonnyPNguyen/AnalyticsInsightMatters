@@ -29,11 +29,11 @@ const GraphBusinessModel = ({ data }) => {
 						{
 							label: "Revenue",
 							data: [
-								data.FR1 || 0,
-								data.FR2 || 0,
-								data.FR3 || 0,
-								data.FR4 || 0,
-								data.FR5 || 0,
+								data.AR1 || 0,
+								data.AR2 || 0,
+								data.AR3 || 0,
+								data.AR4 || 0,
+								data.AR5 || 0,
 							],
 							backgroundColor: colorGreen,
 							borderWidth: 2,

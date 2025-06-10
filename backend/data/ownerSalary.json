@@ -1,0 +1,66 @@
+[
+	{
+		"New South Wales": [
+			{ "Retail trade": 70000 },
+			{ "Wholesale trade": 80000 },
+			{ "Accommodation and food services": 77500 },
+			{ "Other services": 80000 }
+		]
+	},
+	{
+		"Victoria": [
+			{ "Retail trade": 70000 },
+			{ "Wholesale trade": 69250 },
+			{ "Accommodation and food services": 76000 },
+			{ "Other services": 83750 }
+		]
+	},
+	{
+		"Queensland": [
+			{ "Retail trade": 70000 },
+			{ "Wholesale trade": 77500 },
+			{ "Accommodation and food services": 77500 },
+			{ "Other services": 67500 }
+		]
+	},
+	{
+		"South Australia": [
+			{ "Retail trade": 67500 },
+			{ "Wholesale trade": 82000 },
+			{ "Accommodation and food services": 76575 },
+			{ "Other services": 66500 }
+		]
+	},
+	{
+		"Western Australia": [
+			{ "Retail trade": 70000 },
+			{ "Wholesale trade": 77500 },
+			{ "Accommodation and food services": 80000 },
+			{ "Other services": 70000 }
+		]
+	},
+	{
+		"Tasmania": [
+			{ "Retail trade": 77500 },
+			{ "Wholesale trade": 77250 },
+			{ "Accommodation and food services": 73750 },
+			{ "Other services": 73063 }
+		]
+	},
+	{
+		"Northern Territory": [
+			{ "Retail trade": 77500 },
+			{ "Wholesale trade": 80000 },
+			{ "Accommodation and food services": 82500 },
+			{ "Other services": 73063 }
+		]
+	},
+	{
+		"Australian Capital Teritory": [
+			{ "Retail trade": 70000 },
+			{ "Wholesale trade": 80000 },
+			{ "Accommodation and food services": 75000 },
+			{ "Other services": 73063 }
+		]
+	}
+]
