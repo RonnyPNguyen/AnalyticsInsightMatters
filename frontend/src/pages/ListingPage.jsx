@@ -7,13 +7,15 @@ import Formula from "../components/Formula";
 import GraphBusinessModel from "../components/GraphBusinessModel";
 import GraphValuation from "../components/GraphValuation";
 import GraphDiscountedCF from "../components/GraphDiscountedCF";
-import ViewAllOffer from "../components/ViewAllOffer";
+import FullWorkSheet from "../components/FullWorkSheet";
+import ViewAllListings from "../components/ViewAllListings";
 
 // Single Listing Page
 const ListingPage = () => {
 	const { id } = useParams();
 	const [listing, marketData] = useLoaderData();
 	const [output, setOutput] = useState(null);
+	const [showDetail, setShowDetail] = useState(false);
 
 	const moneyFormat = (value) => {
 		return new Intl.NumberFormat("en-AU", {
@@ -30,7 +32,7 @@ const ListingPage = () => {
 		}).format(value);
 	};
 	return (
-		<section className="md:px-30">
+		<section className="lg:w-260 mx-auto">
 			<Formula
 				listingsData={listing}
 				marketData={marketData}
@@ -44,12 +46,12 @@ const ListingPage = () => {
 			</div>
 			<div className="h-8"></div>
 			{output ? (
-				<div className="p-10 grid grid-cols-1 gap-8">
+				<div className="p-5 grid grid-cols-1 gap-8">
 					<div className="text-white font-writing text-left">
 						<div className="bg-[#111111] px-8 rounded-md p-4 grid grid-cols-1 gap-2">
 							<p className="font-light text-2xl">
 								Asking Price: {moneyFormat(output.askingPrice)}
-								{output.gstIncluded === 1 ? "" : " + GST"}
+								{output.gstValue === 0 ? "" : " + GST"}
 								{output.savIncluded === 1 ? "" : " + SAV"}
 							</p>
 							<p className="text-base font-thin ">
@@ -86,25 +88,25 @@ const ListingPage = () => {
 					<div className="text-white font-tabular grid grid-cols-2 lg:grid-cols-4 gap-4">
 						<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
 							<p className="text-2xl">{moneyFormat(output.annualRevenue)}</p>
-							<p className="text-xs text-green-500">
+							<p className="text-sm text-green-500">
 								Revenue @ {percentFormat(output.GR)}
 							</p>
 						</div>
 						<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
 							<p className="text-2xl">{moneyFormat(output.annualWages)}</p>
-							<p className="text-xs text-red-500">
+							<p className="text-sm text-yellow-500">
 								Wage @ {percentFormat(output.WPI)}
 							</p>
 						</div>
 						<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
 							<p className="text-2xl">{moneyFormat(output.annualRent)}</p>
-							<p className="text-xs text-red-500">
+							<p className="text-sm text-orange-500">
 								Rent @ {percentFormat(output.RY)}
 							</p>
 						</div>
 						<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
 							<p className="text-2xl">{moneyFormat(output.annualOutgoings)}</p>
-							<p className="text-xs text-red-500">
+							<p className="text-sm text-red-500">
 								Outgoings @ {percentFormat(output.CPI)}
 							</p>
 						</div>
@@ -112,71 +114,112 @@ const ListingPage = () => {
 					<GraphBusinessModel data={output} />
 					<div className="text-white font-tabular grid grid-cols-2 lg:grid-cols-4 gap-4">
 						<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
+							<p className="text-xl">{moneyFormat(output.annualProfit)}</p>
+							<p className="text-sm text-purple-500">Avg. Gross Profit</p>
+						</div>
+						<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
 							<p className="text-xl">
 								{percentFormat(output.GrossProfitMargin)}
 							</p>
-							<p className="text-xs text-purple-500">Gross Profit Margin</p>
+							<p className="text-sm text-purple-500">Gross Profit Margin</p>
+						</div>
+						<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
+							<p className="text-xl">
+								{moneyFormat(output.TotalNetProfit / 5)}
+							</p>
+							<p className="text-sm text-blue-500">Avg. Net Profit</p>
 						</div>
 						<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
 							<p className="text-xl">{percentFormat(output.NetProfitMargin)}</p>
-							<p className="text-xs text-blue-500">Net Profit Margin</p>
-						</div>
-						<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
-							<p className="text-xl">{percentFormat(output.FCFRate)}</p>
-							<p className="text-xs text-green-500">Cash Flow Growth Rate</p>
-						</div>
-						<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
-							<p className="text-xl">{percentFormat(output.RRR)}</p>
-							<p className="text-xs text-red-500">Required Return Rate</p>
+							<p className="text-sm text-blue-500">Net Profit Margin</p>
 						</div>
 					</div>
 					<GraphDiscountedCF data={output} />
-					<div className="text-white font-tabular grid grid-cols-2 lg:grid-cols-4 gap-4">
+					{showDetail ? (
+						<div className="text-white font-tabular grid grid-cols-2 lg:grid-cols-4 gap-4">
+							<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
+								<p className="text-xl">{percentFormat(output.FCFRate)}</p>
+								<p className="text-sm text-green-500">Cash Flow Growth</p>
+							</div>
+							<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
+								<p className="text-xl">{percentFormat(output.RRR)}</p>
+								<p className="text-sm text-red-500">Required Return</p>
+							</div>
+							<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
+								<div className="grid grid-cols-2 text-white font-tabular text-sm text-white px-2">
+									<p className="">Asking:</p>
+									<p className="text-right">
+										{moneyFormat(output.askingPrice)}
+									</p>
+									<p className="">Est. SAV:</p>
+									<p className="text-right">
+										{moneyFormat(output.estimatedSAV)}
+									</p>
+									<p className="">GST:</p>
+									<p className="text-right">{moneyFormat(output.gstValue)}</p>
+									<p className="">Total:</p>
+									<p className="text-right">
+										{moneyFormat(output.TotalInvestment)}
+									</p>
+								</div>
+								<button
+									className="text-gray-500 text-xs hover:text-gray-300 pt-2 hover:cursor-pointer italic"
+									onClick={() => setShowDetail(!showDetail)}
+								>
+									less details
+								</button>
+							</div>
+							<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
+								<p className="text-xl ">{moneyFormat(output.TotalDCF)}</p>
+								<p className="text-sm text-blue-500">Estimated Value</p>
+							</div>
+						</div>
+					) : (
+						<div className="text-white font-tabular grid grid-cols-2 lg:grid-cols-4 gap-4">
+							<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
+								<p className="text-xl">{percentFormat(output.FCFRate)}</p>
+								<p className="text-sm text-green-500">Cash Flow Growth</p>
+							</div>
+							<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
+								<p className="text-xl">{percentFormat(output.RRR)}</p>
+								<p className="text-sm text-red-500">Required Return</p>
+							</div>
+							<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
+								<p className="text-xl ">
+									{moneyFormat(output.TotalInvestment)}
+								</p>
+								<p className="text-sm text-purple-500">Total Investment</p>
+								<button
+									className="text-gray-500 text-xs hover:text-gray-300 pt-2 hover:cursor-pointer italic"
+									onClick={() => setShowDetail(!showDetail)}
+								>
+									more details
+								</button>
+							</div>
+							<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
+								<p className="text-xl ">{moneyFormat(output.TotalDCF)}</p>
+								<p className="text-sm text-blue-500">Estimated Value</p>
+							</div>
+						</div>
+					)}
+
+					<GraphValuation data={output} />
+					<div className="text-white font-tabular grid grid-cols-2 gap-4">
 						<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
-							<p className="text-xs text-white">Total Investment</p>
-							<p className="text-xl">{moneyFormat(output.TotalInvestment)}</p>
-							<p className="text-xs text-gray-500 text-center pt-2 hidden md:block">
-								(Price + GST + SAV + Fee + Working Capital)
-							</p>
+							<p className="text-xl">{percentFormat(output.ROI)}</p>
+							<p className="text-sm text-orange-500">ROI</p>
 						</div>
 						<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
-							<p className="text-xs text-white">Estimated Value</p>
-							<p className="text-xl">{moneyFormat(output.TotalDCF)}</p>
-							<p className="text-xs text-gray-500 text-center pt-2 hidden md:block">
-								(Total Cash Flow + Terminal Cash Flow at Discounted Rate)
-							</p>
-						</div>
-						<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
-							<p className="text-xs text-white">Return on Investment</p>
-							<p
-								className={`text-xl ${
-									output.ROI > 0 ? "text-green-500" : "text-red-500"
-								}`}
-							>
-								{percentFormat(output.ROI)}
-							</p>
-						</div>
-						<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
-							<p className="text-xs text-white">Verdict</p>
-							<p
-								className={`text-xl ${
-									output.valueEstimation > 0.1
-										? "text-green-500"
-										: output.valueEstimation > -0.1
-										? "text-yellow-500"
-										: "text-red-500"
-								}`}
-							>
-								{output.valueVerdict}
-							</p>
+							<p className="text-xl">{output.valueVerdict}</p>
+							<p className="text-sm text-orange-500">Verdict</p>
 						</div>
 					</div>
-					<GraphValuation data={output} />
+					<FullWorkSheet data={output} />
 				</div>
 			) : (
 				<div>Calculating...</div>
 			)}
-			<ViewAllOffer />
+			<ViewAllListings />
 		</section>
 	);
 };

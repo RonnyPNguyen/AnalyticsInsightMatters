@@ -47,10 +47,9 @@ const CardDetails = ({ listingsData, marketData }) => {
 				<div className="font-tabular text-right">
 					<p className="text-xs text-gray-400">Asking Price</p>
 					<p className="text-base">
-						{`$${moneyFormat(listingsData.askingPrice)} ${
-							listingsData?.savIncluded === 0 ? "+ SAV" : ""
-						}`}{" "}
-						{listingsData?.gstIncluded === 0 ? "+ GST" : ""}
+						{moneyFormat(output.askingPrice)}
+						{output.gstValue === 0 ? "" : " + GST"}
+						{output.savIncluded === 1 ? "" : " + SAV"}
 					</p>
 				</div>
 			</div>

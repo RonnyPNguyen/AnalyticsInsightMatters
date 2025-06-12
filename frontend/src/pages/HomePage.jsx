@@ -1,7 +1,7 @@
 import Hero from "../components/Hero";
 import StakeHolderCards from "../components/StakeHolderCards";
-// import FeaturedCards from "../components/FeaturedCards";
-import ViewAllOffer from "../components/ViewAllOffer";
+import FeaturedCards from "../components/FeaturedCards";
+import ViewAllListings from "../components/ViewAllListings";
 // import { serverDataLoader } from "./ListingsPage";
 
 const HomePage = () => {
@@ -9,8 +9,8 @@ const HomePage = () => {
 		<section>
 			<Hero />
 			<StakeHolderCards />
-			{/* <FeaturedCards numberOfFeatured={2} loader={serverDataLoader} /> */}
-			<ViewAllOffer />
+			<FeaturedCards numberOfFeatured={2} />
+			<ViewAllListings />
 		</section>
 	);
 };

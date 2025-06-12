@@ -12,12 +12,8 @@ const ListingsPage = () => {
 		const serverData = async () => {
 			try {
 				const [listingsRes, marketRes] = await Promise.all([
-					fetch(
-						"https://busy-analytics-server.s3.us-east-1.amazonaws.com/data/listingsData.json"
-					),
-					fetch(
-						"https://busy-analytics-server.s3.us-east-1.amazonaws.com/data/marketData.json"
-					),
+					fetch("api/data/listingsData.json"),
+					fetch("api/data/marketData.json"),
 				]);
 				const listingsJson = await listingsRes.json();
 				const marketJson = await marketRes.json();

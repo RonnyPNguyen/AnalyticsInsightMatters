@@ -6,17 +6,19 @@ const Formula = ({ listingsData, marketData, onResult }) => {
 			const result = calculateFormula(listingsData, marketData);
 			onResult(result);
 		}
-	}, []);
+	}, [listingsData, marketData]);
 
 	return null;
 };
 
 function calculateFormula(listingsData, marketData) {
 	const data = listingsData;
-	const market = marketData;
-
-	const CPI = market.CPI / 100;
-	const WPI = market.WPI / 100;
+	let market;
+	if (Array.isArray(marketData)) {
+		market = marketData[0];
+	} else {
+		market = marketData;
+	}
 
 	const id = data.id;
 	const businessName = data.businessName;
@@ -35,11 +37,11 @@ function calculateFormula(listingsData, marketData) {
 	const annualWages = data.annualWages;
 	const annualRent = data.annualRent;
 	const annualProfit = data.annualProfit;
-	const gstIncluded = data.gstIncluded;
+	const gstValue = data.gstValue;
 	const savIncluded = data.savIncluded;
+	const savValue = data.savValue;
 	const yieldIncluded = data.yieldIncluded;
 	const yieldValue = data.yieldValue;
-	const sgaIncluded = data.sgaIncluded;
 	const sgaValue = data.sgaValue;
 	const tradingDays = data.tradingDays;
 	const listingStatus = data.listingStatus;
@@ -47,6 +49,11 @@ function calculateFormula(listingsData, marketData) {
 	const listingVerified = data.listingVerified;
 	const listingUrl = data.listingUrl;
 
+	const CPI = market.CPI / 100;
+	const WPI = market.WPI / 100;
+	const growthByState = market.growthByState;
+	const stockLevelByIndustry = market.stockLevelByIndustry;
+	const rentalYieldByCapital = market.rentalYieldByCapital;
 	const capitals = {
 		NSW: "Sydney",
 		VIC: "Melbourne",
@@ -67,9 +74,8 @@ function calculateFormula(listingsData, marketData) {
 		ACT: "Australian Capital Territory",
 		NT: "Northern Territory",
 	};
-
-	let GR = market.growthByState[states[locationState]] / 100; // Growth Rate
-	let SL = market.stockLevelByIndustry[businessIndustry] / 100; // Stock at Value Rate
+	let GR = growthByState[states[locationState]] / 100; // Growth Rate
+	let SL = stockLevelByIndustry[businessIndustry] / 100; // Stock at Value Rate
 
 	let RY;
 	if (yieldIncluded === 0) {
@@ -80,28 +86,29 @@ function calculateFormula(listingsData, marketData) {
 
 	// Market Case
 	let RRR = 0.15; // Default Rate of Return
+
 	let ownerSalary = 72000;
-	let totalWages = annualWages; // Default Wages
+	let totalWages = 0; // Default Wages
 	switch (businessModel) {
 		case "Owner Operated":
 			RRR = 0.2; // Owner Operated
-			totalWages = ownerSalary; // 100% Owner Involvement
+			totalWages = annualWages + ownerSalary; // 100% Owner Involvement
 			break;
 		case "Mixed Management":
 			RRR = 0.18; // Mixed Management
-			totalWages = annualWages + ownerSalary; // 50% Owner Involvement
+			totalWages = annualWages + ownerSalary * 0.5; // 50% Owner Involvement
 			break;
 		case "Owner Administrated":
 			RRR = 0.15; // Owner Administrated
-			totalWages = ownerSalary * 0.5 + annualWages; // 33% Owner Involvement
+			totalWages = annualWages + ownerSalary * 0.2; // 33% Owner Involvement
 			break;
 		case "Under Management":
 			RRR = 0.12; // Management
 			totalWages = annualWages; // 0% Owner Involvement
 			break;
 		case "Franchise":
-			RRR = 0.1; // 20% Owner Involvement
-			totalWages = ownerSalary * 25 + annualWages;
+			RRR = 0.1; // Franchise
+			totalWages = annualWages; // 0% Owner Involvement
 			break;
 		default:
 	}
@@ -138,32 +145,34 @@ function calculateFormula(listingsData, marketData) {
 	const TotalExpense5 = OG5 + W5 + R5;
 	// Non-Cash Deductions
 	const workingCapital = (annualOutgoings + totalWages + annualRent) / 2; // 6-months Buffer
-	const depreciationRate = 0.04; // 4% Depreciation
-	let sgaRate = 0;
-	sgaIncluded === 0 ? 0 : sgaValue !== 1 ? (sgaRate = sgaValue) : 0.1;
-	// Initial Investment
-	let estimatedSAV;
-	if (savIncluded === 1) {
-		estimatedSAV = 0;
-	}
-	if (savIncluded === 0) {
-		estimatedSAV = annualRevenue * SL;
-	} else {
-		estimatedSAV = savIncluded;
-	}
-	const gstValue = gstIncluded === 0 ? askingPrice * 0.1 : 0;
-	const TotalInvestment =
-		askingPrice + gstValue + estimatedSAV + workingCapital;
+	const depreciationRate = 0.04;
 
-	// Taxes amd Interest
-	const TaxRate = 0.28;
+	let estimatedSAV = 0;
+	if (savIncluded === 0 && savValue === 0) {
+		estimatedSAV = SL * annualRevenue;
+	}
+
+	let estimatedGST = 0;
+	if (gstValue !== 0) {
+		estimatedGST = askingPrice * 0.1;
+	}
+	let sgaRate = 0;
+	if (sgaValue !== 0) {
+		sgaRate = sgaValue;
+	}
+
+	const TotalInvestment =
+		askingPrice + estimatedGST + estimatedSAV + workingCapital;
+
+	// Taxes, Interest, and SGA
+	const taxRate = 0.25;
 	const interestRate = 0;
 	const loanAmount = 0;
 
 	// Cash Flow Year 1 to Year 5
 	const EBITDA1 = AR1 - TotalExpense1;
 	const EBIT1 = EBITDA1 * (1 - sgaRate) - depreciationRate * AR1;
-	const NI1 = EBIT1 * (1 - TaxRate) - interestRate * loanAmount;
+	const NI1 = EBIT1 * (1 - taxRate) - interestRate * loanAmount;
 	const OCF1 = NI1 + depreciationRate * AR1;
 	const WC1 = workingCapital - workingCapital / 5;
 	const NWC1 = WC1 - workingCapital;
@@ -172,7 +181,7 @@ function calculateFormula(listingsData, marketData) {
 
 	const EBITDA2 = AR2 - TotalExpense2;
 	const EBIT2 = EBITDA2 * (1 - sgaRate) - depreciationRate * AR2;
-	const NI2 = EBIT2 * (1 - TaxRate) - interestRate * loanAmount;
+	const NI2 = EBIT2 * (1 - taxRate) - interestRate * loanAmount;
 	const OCF2 = NI2 + depreciationRate * AR2;
 	const WC2 = WC1 - workingCapital / 5;
 	const NWC2 = WC2 - WC1;
@@ -181,7 +190,7 @@ function calculateFormula(listingsData, marketData) {
 
 	const EBITDA3 = AR3 - TotalExpense3;
 	const EBIT3 = EBITDA3 * (1 - sgaRate) - depreciationRate * AR3;
-	const NI3 = EBIT3 * (1 - TaxRate) - interestRate * loanAmount;
+	const NI3 = EBIT3 * (1 - taxRate) - interestRate * loanAmount;
 	const OCF3 = NI3 + depreciationRate * AR3;
 	const WC3 = WC2 - workingCapital / 5;
 	const NWC3 = WC3 - WC2;
@@ -190,7 +199,7 @@ function calculateFormula(listingsData, marketData) {
 
 	const EBITDA4 = AR4 - TotalExpense4;
 	const EBIT4 = EBITDA4 * (1 - sgaRate) - depreciationRate * AR4;
-	const NI4 = EBIT4 * (1 - TaxRate) - interestRate * loanAmount;
+	const NI4 = EBIT4 * (1 - taxRate) - interestRate * loanAmount;
 	const OCF4 = NI4 + depreciationRate * AR4;
 	const WC4 = WC3 - workingCapital / 5;
 	const NWC4 = WC4 - WC3;
@@ -199,7 +208,7 @@ function calculateFormula(listingsData, marketData) {
 
 	const EBITDA5 = AR5 - TotalExpense5;
 	const EBIT5 = EBITDA5 * (1 - sgaRate) - depreciationRate * AR5;
-	const NI5 = EBIT5 * (1 - TaxRate) - interestRate * loanAmount;
+	const NI5 = EBIT5 * (1 - taxRate) - interestRate * loanAmount;
 	const OCF5 = NI5 + depreciationRate * AR5;
 	const WC5 = WC4 - workingCapital / 5;
 	const NWC5 = WC5 - WC4;
@@ -243,22 +252,43 @@ function calculateFormula(listingsData, marketData) {
 		annualWages,
 		annualRent,
 		annualProfit,
-		gstIncluded,
+		gstValue,
 		savIncluded,
+		savValue,
 		yieldIncluded,
 		yieldValue,
-		sgaIncluded,
 		sgaValue,
 		tradingDays,
 		listingStatus,
 		dateAdded,
 		listingVerified,
 		listingUrl,
+		estimatedSAV,
+		estimatedGST,
+		sgaRate,
+		depreciationRate,
+		taxRate,
+		workingCapital,
 		AR1,
 		AR2,
 		AR3,
 		AR4,
 		AR5,
+		OG1,
+		OG2,
+		OG3,
+		OG4,
+		OG5,
+		R1,
+		R2,
+		R3,
+		R4,
+		R5,
+		W1,
+		W2,
+		W3,
+		W4,
+		W5,
 		TotalExpense1,
 		TotalExpense2,
 		TotalExpense3,

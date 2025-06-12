@@ -1,11 +1,31 @@
 import Card from "./Card";
 import Spinner from "./Spinner";
-import { useLoaderData } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const FeaturedCards = ({ numberOfFeatured = 4 }) => {
-	const { listingsData, marketData } = [];
-	try {
-	} catch (error) {}
+	const [loading, setLoading] = useState(true);
+	const [listingsData, setListingsData] = useState([]);
+	const [marketData, setMarketData] = useState();
+	useEffect(() => {
+		const serverData = async () => {
+			try {
+				const [listingsRes, marketRes] = await Promise.all([
+					fetch("api/data/listingsData.json"),
+					fetch("api/data/marketData.json"),
+				]);
+				const listingsJson = await listingsRes.json();
+				const marketJson = await marketRes.json();
+
+				setListingsData(listingsJson);
+				setMarketData(marketJson);
+			} catch (error) {
+				console.error("Error fetching data:", error);
+			} finally {
+				setLoading(false);
+			}
+		};
+		serverData();
+	}, []);
 
 	const RecentOffers = listingsData.slice(0, numberOfFeatured);
 
@@ -17,7 +37,7 @@ const FeaturedCards = ({ numberOfFeatured = 4 }) => {
 			{listingsData ? (
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-20 p-10">
 					{RecentOffers.map((offer) => (
-						<Card key={offer.id} data={offer} />
+						<Card key={offer.id} listingsData={offer} marketData={marketData} />
 					))}
 				</div>
 			) : (
