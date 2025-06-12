@@ -7,19 +7,38 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
 *.local
 
-# Editor directories and files
+# Env files
+.env
+.env.*.local
+
+# Amplify generated files (if any)
+amplify/#current-cloud-backend/
+amplify/backend/
+amplify/.config/
+amplify/team-provider-info.json
+amplify/.awsconfig.json
+
+# Vite cache
+.vite/
+
+# IDEs and editors
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-.DS_Store
+
+# Mac system files
+Thumbs.db
