@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import { Transition } from "@headlessui/react";
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -53,16 +52,7 @@ const Navbar = () => {
 					</div>
 				</div>
 			</nav>
-
-			<Transition
-				show={isOpen}
-				enter="transition duration-300 ease-out"
-				enterFrom="opacity-0 -translate-y-2"
-				enterTo="opacity-100 translate-y-0"
-				leave="transition duration-200 ease-in"
-				leaveFrom="opacity-100 translate-y-0"
-				leaveTo="opacity-0 -translate-y-2"
-			>
+			{isOpen && (
 				<div className="fixed top-16 left-0 w-full z-50 md:hidden bg-black px-8 py-4 space-y-4 font-nav text-white text-base font-light">
 					<NavLink
 						to="/"
@@ -95,7 +85,7 @@ const Navbar = () => {
 						</NavLink>
 					</div>
 				</div>
-			</Transition>
+			)}
 		</>
 	);
 };
