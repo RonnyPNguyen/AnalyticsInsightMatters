@@ -74,14 +74,14 @@ function calculateFormula(listingsData, marketData) {
 		ACT: "Australian Capital Territory",
 		NT: "Northern Territory",
 	};
-	let GR = growthByState[states[locationState]] / 100; // Growth Rate
-	let SL = stockLevelByIndustry[businessIndustry] / 100; // Stock at Value Rate
+	let GR = growthByState[states[locationState]] / 100;
+	let SL = stockLevelByIndustry[businessIndustry] / 100;
 
 	let RY;
 	if (yieldIncluded === 0) {
 		RY = market.rentalYieldByCapital[capitals[locationState]] / 100;
 	} else {
-		RY = yieldValue; // Rental Yield
+		RY = yieldValue / 100; // Rental Yield
 	}
 
 	// Market Case

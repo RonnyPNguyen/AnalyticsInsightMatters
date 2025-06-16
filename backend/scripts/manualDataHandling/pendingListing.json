@@ -47,7 +47,7 @@
 		"annualWages": 200000,
 		"annualRent": 200000,
 		"annualProfit": 200000,
-		"gstValue": 199999,
+		"gstValue": 0,
 		"savIncluded": 1,
 		"savValue": 1,
 		"yieldIncluded": 1,
