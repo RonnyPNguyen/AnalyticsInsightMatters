@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBook } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -12,12 +14,12 @@ const Navbar = () => {
 		<>
 			<nav className="sticky top-0 z-10">
 				<div className="h-16 px-8 flex justify-between items-center bg-black/60 backdrop-blur-lg">
-					<div className="w-40">
+					<div className="w-50">
 						<NavLink
 							to="/"
 							className="flex items-center space-x-2 transition duration-300"
 						>
-							<h1 className="text-white text-3xl font-logo">FinAlytics</h1>
+							<h1 className="text-3xl font-logo">AIM Project</h1>
 						</NavLink>
 					</div>
 					<div className="hidden md:flex sm:space-x-4 md:space-x-8 lg:space-x-12 font-nav text-white text-base font-light text-center">
@@ -31,17 +33,27 @@ const Navbar = () => {
 							About
 						</NavLink>
 					</div>
-					<div className="hidden md:flex w-40 h-8 justify-end items-center text-white text-base font-light font-nav">
+					<div className="hidden md:flex w-50 h-8 gap-4 justify-end items-center text-white text-base font-light font-nav">
+						<div className="w-200 bg-white p-[2px] rounded-full w-fit transition duration-300 hover:text-black">
+							<NavLink
+								to="/documentation"
+								className="block bg-black rounded-full w-[80px] h-[32px] flex justify-center items-center transition duration-100 hover:bg-transparent hover:scale-105"
+							>
+								<div>
+									<FontAwesomeIcon icon={faBook} className="" />
+									<span>{` Docs`} </span>
+								</div>
+							</NavLink>
+						</div>
 						<div className="diagonal-gradient p-[2px] rounded-full w-fit transition duration-300">
 							<NavLink
 								to="/login"
-								className="block bg-black rounded-full px-6 py-1 transition duration-300 hover:bg-transparent sm:px-3 hover:scale-105"
+								className="block bg-black rounded-full w-[80px] h-[32px] flex justify-center items-center transition duration-300 hover:bg-transparent hover:scale-105"
 							>
-								Log In
+								<div>Log In</div>
 							</NavLink>
 						</div>
 					</div>
-
 					<div className="md:hidden">
 						<button
 							onClick={() => setIsOpen(!isOpen)}

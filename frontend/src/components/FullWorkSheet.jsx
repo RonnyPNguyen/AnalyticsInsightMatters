@@ -29,8 +29,8 @@ const FullWorkSheet = ({ data }) => {
 	];
 	const initialInvestmentRows = [
 		{ "Asking Price": [data.askingPrice, "-", "-", "-", "-", "-"] },
-		{ GST: [data.gstValue, "-", "-", "-", "-", "-"] },
-		{ SAV: [data.savValue, "-", "-", "-", "-", "-"] },
+		{ GST: [data.estimatedGST, "-", "-", "-", "-", "-"] },
+		{ SAV: [data.estimatedSAV, "-", "-", "-", "-", "-"] },
 	];
 	const operatingCashFlowRows = [
 		{
@@ -118,7 +118,7 @@ const FullWorkSheet = ({ data }) => {
 	const incrementalCashFlowRows = [
 		{
 			"Predicted Cash flow": [
-				"-",
+				-data.TotalInvestment,
 				data.NetOCF1,
 				data.NetOCF2,
 				data.NetOCF3,
@@ -128,7 +128,7 @@ const FullWorkSheet = ({ data }) => {
 		},
 		{
 			"Discounted Cash flow": [
-				"-",
+				-data.TotalInvestment,
 				data.DCF1,
 				data.DCF2,
 				data.DCF3,
@@ -142,12 +142,37 @@ const FullWorkSheet = ({ data }) => {
 		<div>
 			{showDetails ? (
 				<div>
-					<div className="flex flex-col gap-4">
-						<FinancialTable rows={businessModelRows} />
-						<FinancialTable rows={initialInvestmentRows} />
-						<FinancialTable rows={operatingCashFlowRows} />
-						<FinancialTable rows={workingCapitalRows} />
-						<FinancialTable rows={incrementalCashFlowRows} />
+					<div className="flex flex-col gap-4 bg-[#111111] p-2 text-center">
+						<div>
+							<h2 className="text-lg font-semibold mb-4 mt-2 text-white">
+								Business Model
+							</h2>
+							<FinancialTable rows={businessModelRows} />
+						</div>
+						<div>
+							<h2 className="text-lg font-semibold mb-4 text-white">
+								Initial Investment
+							</h2>
+							<FinancialTable rows={initialInvestmentRows} />
+						</div>
+						<div>
+							<h2 className="text-lg font-semibold mb-4 text-white">
+								Operating Cash Flow
+							</h2>
+							<FinancialTable rows={operatingCashFlowRows} />
+						</div>
+						<div>
+							<h2 className="text-lg font-semibold mb-4 text-white">
+								Working Capital
+							</h2>
+							<FinancialTable rows={workingCapitalRows} />
+						</div>
+						<div>
+							<h2 className="text-lg font-semibold mb-4 text-white">
+								Incremental Cash Flow
+							</h2>
+							<FinancialTable rows={incrementalCashFlowRows} />
+						</div>
 					</div>
 					<button
 						className="mt-4 italic bg-[#333333] rounded-lg hover:bg-gray-900 text-blue-500 p-4 hover:hover:cursor-pointer w-full mx-auto"

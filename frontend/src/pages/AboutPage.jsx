@@ -21,8 +21,9 @@ const AboutPage = () => {
 							Started with a simple idea: To bridge the gap between traditional
 							valuation models and the real-world complexity of business
 							listings. By incorporating economic factors from real-time
-							database, FinAlytics provides a comprehensive valuation model to
-							streamline the screening process for all investors.
+							database, The Analytics Insight Matters Project, or AIM, provides
+							a comprehensive valuation model to streamline the screening
+							process for all investors.
 						</p>
 					</div>
 				</div>
@@ -37,8 +38,8 @@ const AboutPage = () => {
 				<section className="text-center py-8">
 					<p className="py-4 text-4xl font-light">Concept and Scope</p>
 					<p className="py-4 text-base font-thin text-justify">
-						FinAlytics began as a personal portfolio project. I was browsing the
-						web for business for sale and noticed a lack of standardization
+						AIM project began as a personal portfolio project. I was browsing
+						the web for business for sale and noticed a lack of standardization
 						between these listings. Key information are conveniently left out,
 						or simply unavailable, making it difficult to compare and analyze.
 					</p>

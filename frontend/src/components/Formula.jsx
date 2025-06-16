@@ -42,7 +42,7 @@ function calculateFormula(listingsData, marketData) {
 	const savValue = data.savValue;
 	const yieldIncluded = data.yieldIncluded;
 	const yieldValue = data.yieldValue / 100;
-	const sgaValue = data.sgaValue;
+	const sgaValue = data.sgaValue / 100;
 	const tradingDays = data.tradingDays;
 	const listingStatus = data.listingStatus;
 	const dateAdded = data.dateAdded;

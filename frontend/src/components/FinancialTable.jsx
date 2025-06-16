@@ -13,7 +13,7 @@ export default function FinancialTable({ rows }) {
 			<TableContainer component={Paper} sx={{ minWidth: 400 }}>
 				<Table
 					sx={{
-						backgroundColor: "#111111",
+						backgroundColor: "#000000",
 					}}
 					aria-label="financial table"
 				>
