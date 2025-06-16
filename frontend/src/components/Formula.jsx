@@ -81,7 +81,7 @@ function calculateFormula(listingsData, marketData) {
 	if (yieldIncluded === 0) {
 		RY = market.rentalYieldByCapital[capitals[locationState]] / 100;
 	} else {
-		RY = yieldValue / 100; // Rental Yield
+		RY = yieldValue; // Rental Yield
 	}
 
 	// Market Case
