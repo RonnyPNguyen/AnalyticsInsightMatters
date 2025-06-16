@@ -12,7 +12,6 @@ import {
 	Legend,
 	Filler,
 } from "chart.js";
-import { max } from "d3";
 
 ChartJS.register(
 	CategoryScale,

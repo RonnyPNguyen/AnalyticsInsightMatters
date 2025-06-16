@@ -1,5 +1,4 @@
 import Card from "./Card";
-import Spinner from "./Spinner";
 import { useState, useEffect } from "react";
 
 const FeaturedCards = ({ numberOfFeatured = 4 }) => {
@@ -41,7 +40,7 @@ const FeaturedCards = ({ numberOfFeatured = 4 }) => {
 					))}
 				</div>
 			) : (
-				<Spinner loading={true} />
+				<div>Loading</div>
 			)}
 		</section>
 	);

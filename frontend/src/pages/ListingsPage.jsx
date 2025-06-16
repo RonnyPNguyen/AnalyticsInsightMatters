@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Card from "../components/Card";
-import Spinner from "../components/Spinner";
 import Disclaimer from "../components/Disclaimer";
 import NewListing from "../components/NewListing";
 
@@ -67,7 +66,7 @@ const ListingsPage = () => {
 					))}
 				</div>
 			) : (
-				Spinner({ loading: loading })
+				<div>Loading...</div>
 			)}
 			<NewListing />
 		</section>
