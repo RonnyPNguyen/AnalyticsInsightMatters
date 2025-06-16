@@ -135,7 +135,7 @@ const ListingPage = () => {
 						</div>
 					</div>
 					<GraphDiscountedCF data={output} />
-					{showDetail ? (
+					{/* {showDetail ? (
 						<div className="text-white font-tabular grid grid-cols-2 lg:grid-cols-4 gap-4">
 							<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
 								<p className="text-xl">{percentFormat(output.FCFRate)}</p>
@@ -175,33 +175,32 @@ const ListingPage = () => {
 							</div>
 						</div>
 					) : (
-						<div className="text-white font-tabular grid grid-cols-2 lg:grid-cols-4 gap-4">
-							<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
-								<p className="text-xl">{percentFormat(output.FCFRate)}</p>
-								<p className="text-sm text-green-500">Cash Flow Growth</p>
-							</div>
-							<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
-								<p className="text-xl">{percentFormat(output.RRR)}</p>
-								<p className="text-sm text-red-500">Required Return</p>
-							</div>
-							<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
-								<p className="text-xl ">
-									{moneyFormat(output.TotalInvestment)}
-								</p>
-								<p className="text-sm text-purple-500">Total Investment</p>
-								<button
-									className="text-gray-500 text-xs hover:text-gray-300 pt-2 hover:cursor-pointer italic"
-									onClick={() => setShowDetail(!showDetail)}
-								>
-									more details
-								</button>
-							</div>
-							<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
-								<p className="text-xl ">{moneyFormat(output.TotalDCF)}</p>
-								<p className="text-sm text-blue-500">Estimated Value</p>
-							</div>
+						<div></div>
+					)} */}
+					<div className="text-white font-tabular grid grid-cols-2 lg:grid-cols-4 gap-4">
+						<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
+							<p className="text-xl">{percentFormat(output.FCFRate)}</p>
+							<p className="text-sm text-green-500">Cash Flow Growth</p>
 						</div>
-					)}
+						<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
+							<p className="text-xl">{percentFormat(output.RRR)}</p>
+							<p className="text-sm text-red-500">Required Return</p>
+						</div>
+						<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
+							<p className="text-xl ">{moneyFormat(output.TotalInvestment)}</p>
+							<p className="text-sm text-purple-500">Total Investment</p>
+							{/* <button
+								className="text-gray-500 text-xs hover:text-gray-300 pt-2 hover:cursor-pointer italic"
+								onClick={() => setShowDetail(!showDetail)}
+							>
+								more details
+							</button> */}
+						</div>
+						<div className="bg-[#111111] w-full py-6 flex flex-col items-center justify-center rounded-md">
+							<p className="text-xl ">{moneyFormat(output.TotalDCF)}</p>
+							<p className="text-sm text-blue-500">Estimated Value</p>
+						</div>
+					</div>
 
 					<GraphValuation data={output} />
 					<div className="text-white font-tabular grid grid-cols-2 gap-4">
