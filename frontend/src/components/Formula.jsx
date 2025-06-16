@@ -37,11 +37,11 @@ function calculateFormula(listingsData, marketData) {
 	const annualWages = data.annualWages;
 	const annualRent = data.annualRent;
 	const annualProfit = data.annualProfit;
-	const gstValue = data.gstValue;
+	const gstValue = data.gstValue / 100;
 	const savIncluded = data.savIncluded;
 	const savValue = data.savValue;
 	const yieldIncluded = data.yieldIncluded;
-	const yieldValue = data.yieldValue;
+	const yieldValue = data.yieldValue / 100;
 	const sgaValue = data.sgaValue;
 	const tradingDays = data.tradingDays;
 	const listingStatus = data.listingStatus;
