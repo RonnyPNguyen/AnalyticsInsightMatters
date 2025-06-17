@@ -98,13 +98,13 @@ const DocumentationPage = () => {
 					<li>BusinessesForSale.com: australia.businessesforsale.com</li>
 				</ul>
 				<p className="text-md font-light text-left mb-2 ml-4">
-					Inclusion Criteria:
+					Data Input Criteria:
 				</p>
 				<ul className="text-md font-light text-left mb-2 ml-8 list-disc">
 					<li>
-						Listings must disclose at least four out of the five key financial
-						indicators: Revenue, Rent, Outgoings, Wages, and Net Profit. The
-						fifth may be derived where feasible.
+						Listings information must disclose at least four out of the five key
+						financial indicators: Revenue, Rent, Outgoings, Wages, and Net
+						Profit. The fifth may be derived where feasible.
 					</li>
 					<li>
 						Business descriptions must be sufficiently detailed to facilitate
@@ -113,9 +113,8 @@ const DocumentationPage = () => {
 					</li>
 					<li>
 						Supplementary variables that enhance model precision are also
-						collected, including: GST status, Stock at Valuation (SAV), rent
-						escalation terms, number of employees, Cost of Goods Sold (COGS),
-						and administration fees (especially in franchise structures).
+						collected, including: GST, Stock at Valuation (SAV), annual rental
+						yield, and administration fees (especially in franchise structures).
 					</li>
 				</ul>
 
@@ -153,17 +152,17 @@ const DocumentationPage = () => {
 
 				<p className="text-lg font-base text-left mb-2">III. Data Processing</p>
 				<p className="text-md font-light text-left mb-2 ml-4">
-					All monetary variables are normalized to annual figures. Only verified
+					All financial figures are normalized to annual scale. Only verified
 					data from the most recent complete financial year are used;
 					projections are excluded.
 				</p>
 				<p className="text-md font-light text-left mb-2 ml-4">
 					To smooth year-to-year fluctuations, Compound Annual Growth Rate
-					(CAGR) is employed for all projections.
+					(CAGR) is employed for all projections growth rate.
 				</p>
 				<p className="text-md font-light text-left mb-2 ml-4">
 					Economic indicators are compiled over a 5-year historical window,
-					irrespective of reporting cycles.
+					regardless of reporting period.
 				</p>
 				<p className="text-md font-light text-left mb-2 ml-4">
 					Input dimensions are standardized prior to integration into the model
@@ -203,11 +202,11 @@ const DocumentationPage = () => {
 
 				<p className="text-lg font-base text-left mb-2">I. Business Model</p>
 				<p className="text-md font-light text-left mb-2 ml-4">
-					The base year (Year 0) utilizes actual financial figures obtained from
-					listings.
+					The base year (Year 0) summarizes the actual financial figures
+					obtained from listings.
 				</p>
 				<p className="text-md font-light text-left mb-2 ml-4">
-					Forward projections are informed by macroeconomic indicators and
+					Forward projections are based on macroeconomic indicators and
 					historical growth data.
 				</p>
 
@@ -216,7 +215,8 @@ const DocumentationPage = () => {
 				</p>
 				<p className="text-md font-light text-left mb-2 ml-4">
 					Initial investment comprises the asking price plus estimated SAV and
-					GST, if such costs are not explicitly stated.
+					GST, and Initial Working Capital, which is a 6-month buffer for all
+					expenses and will be recouped over the 5-year period.
 				</p>
 
 				<p className="text-lg font-base text-left mb-2">
@@ -264,7 +264,7 @@ const DocumentationPage = () => {
 				</ul>
 				<p className="text-md font-light text-left mb-2 ml-4">
 					Sensitivity analysis tools are currently in development to complement
-					this assessment.
+					this analysis.
 				</p>
 			</div>
 			<ViewAllListings />

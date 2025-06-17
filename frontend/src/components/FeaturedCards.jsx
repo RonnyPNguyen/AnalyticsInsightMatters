@@ -34,7 +34,7 @@ const FeaturedCards = ({ numberOfFeatured = 4 }) => {
 
 	return (
 		<section className="2xl:px-30">
-			<p className="text-center text-white font-writing font-thin text-4xl py-10">
+			<p className="text-center text-white font-writing font-thin text-4xl pt-10">
 				Featured Listings
 			</p>
 			{listingsData ? (

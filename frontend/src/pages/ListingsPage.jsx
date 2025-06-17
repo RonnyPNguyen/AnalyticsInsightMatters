@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import Card from "../components/Card";
 import Disclaimer from "../components/Disclaimer";
 import NewListing from "../components/NewListing";
+import { BsGridFill } from "react-icons/bs";
+import { FaListUl } from "react-icons/fa6";
 
 const ListingsPage = () => {
 	const [loading, setLoading] = useState(true);
@@ -42,6 +44,23 @@ const ListingsPage = () => {
 	const [view, setView] = useState("latest");
 	const sortedOffers = view === "latest" ? latestOffers : biggestOffers;
 
+	const [layout, setLayOut] = useState("grid");
+	const [gridSelected, setGridSelected] = useState(true);
+	const [listSelected, setListSelected] = useState(false);
+
+	const handleLayoutChange = (newLayout) => {
+		if (layout === newLayout) return;
+		setLayOut(newLayout);
+		setGridSelected(!gridSelected);
+		setListSelected(!listSelected);
+	};
+	const gridSelectedClass = gridSelected
+		? "text-white hover:cursor-pointer"
+		: "text-gray-500 hover:text-gray-400 hover:cursor-pointer";
+	const listSelectedClass = listSelected
+		? "text-white hover:cursor-pointer"
+		: "text-gray-500 hover:text-gray-400 hover:cursor-pointer";
+
 	return (
 		<section className="2xl:px-30">
 			<div className="h-8"></div>
@@ -52,16 +71,37 @@ const ListingsPage = () => {
 				</p>
 				<Disclaimer />
 			</div>
-			<div className="font-writing flex flex-row justify-center h-8">
-				<p className="py-1 text-white font-thin mr-2">Sort by:</p>
-				<select
-					value={view}
-					onChange={(e) => setView(e.target.value)}
-					className="px-4 py-1 bg-[#111111] rounded-md text-gray-200 font-thin text-center focus:ring-2 focus:ring-blue-400"
-				>
-					<option value="latest">Latest Date</option>
-					<option value="biggest">Asking Price</option>
-				</select>
+			<div className="h-8 flex flex-row justify-center gap-4">
+				<div className="font-writing flex flex-row justify-center h-8">
+					<p className="py-1 text-white font-thin mr-2">Sort by:</p>
+					<select
+						value={view}
+						onChange={(e) => setView(e.target.value)}
+						className="px-2 py-1 bg-[#111111] rounded-md text-gray-200 font-thin text-center focus:ring-2 focus:ring-blue-400"
+					>
+						<option value="latest">Latest Date</option>
+						<option value="biggest">Asking Price</option>
+					</select>
+				</div>
+				<div className="font-writing flex flex-row justify-center h-8">
+					<p className="py-1 text-white font-thin mr-2">View:</p>
+					<div className="bg-[#111111] flex flex-row justify-center items-center gap-4 rounded-md px-2">
+						<button className="">
+							<BsGridFill
+								size="24px"
+								className={gridSelectedClass}
+								onClick={() => handleLayoutChange("grid")}
+							/>
+						</button>
+						<button className="text-white">
+							<FaListUl
+								size="24px"
+								className={listSelectedClass}
+								onClick={() => handleLayoutChange("list")}
+							/>
+						</button>
+					</div>
+				</div>
 			</div>
 			{sortedOffers ? (
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-20 p-10">
