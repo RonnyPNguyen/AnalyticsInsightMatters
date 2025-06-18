@@ -35,7 +35,7 @@ const Graph = ({ data }) => {
 	const colorBlack = "#111111";
 	const barThickness = 100;
 	const labelOffsetX = 0;
-	const labelOffsetY = 210;
+	const labelOffsetY = 240;
 	const labelOffsetR = 90;
 	const moneyFormat = (number) => {
 		return (
