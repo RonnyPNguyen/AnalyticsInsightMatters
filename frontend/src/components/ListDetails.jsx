@@ -33,7 +33,7 @@ const ListDetails = ({ listingsData, marketData }) => {
 				onResult={setOutput}
 			/>
 			{output ? (
-				<div className="font-tabular text-sm w-full">
+				<div className="font-tabular text-xs md:text-sm w-full">
 					<div className="flex justify-between items-center py-2">
 						<div>
 							<div>{output.businessName}</div>
