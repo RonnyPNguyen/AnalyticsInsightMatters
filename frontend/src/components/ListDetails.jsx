@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+
 import { FaMapMarkerAlt } from "react-icons/fa";
 import Formula from "./Formula";
 
@@ -26,7 +26,7 @@ const ListDetails = ({ listingsData, marketData }) => {
 		stateAbbreviations[stateName] || stateName;
 
 	return (
-		<div className="">
+		<div>
 			<Formula
 				listingsData={listingsData}
 				marketData={marketData}
