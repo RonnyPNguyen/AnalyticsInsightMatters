@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Card from "../components/Card";
+import List from "../components/List";
 import Disclaimer from "../components/Disclaimer";
 import NewListing from "../components/NewListing";
 import { BsGridFill } from "react-icons/bs";
@@ -62,7 +63,7 @@ const ListingsPage = () => {
 		: "text-gray-500 hover:text-gray-400 hover:cursor-pointer";
 
 	return (
-		<section className="2xl:px-30">
+		<section className="">
 			<div className="h-8"></div>
 			<div className="font-writing text-white text-center h-60 flex flex-col justify-center">
 				<p className="text-4xl font-light">Business Listings</p>
@@ -103,10 +104,24 @@ const ListingsPage = () => {
 					</div>
 				</div>
 			</div>
-			{sortedOffers ? (
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-20 p-10">
+			{layout === "grid" ? (
+				sortedOffers ? (
+					<div className="2xl:w-384 2xl:mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 p-10">
+						{sortedOffers.map((offer) => (
+							<Card
+								key={offer.id}
+								listingsData={offer}
+								marketData={marketData}
+							/>
+						))}
+					</div>
+				) : (
+					<div>Loading...</div>
+				)
+			) : sortedOffers ? (
+				<div className="xl:w-320 xl:mx-auto grid grid-cols-1 gap-10 p-10">
 					{sortedOffers.map((offer) => (
-						<Card key={offer.id} listingsData={offer} marketData={marketData} />
+						<List key={offer.id} listingsData={offer} marketData={marketData} />
 					))}
 				</div>
 			) : (
