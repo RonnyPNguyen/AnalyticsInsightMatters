@@ -8,11 +8,12 @@ const s3 = new S3Client();
 
 export const handler = async (event) => {
 	try {
-		const body = JSON.parse(event.body);
+		const body =
+			typeof event.body === "string" ? JSON.parse(event.body) : event;
 
 		// Get object
 		const getObjectCommand = new GetObjectCommand({
-			Bucket: "busy-analytics-server",
+			Bucket: "aim-project-server",
 			Key: "data/pendingListing.json",
 		});
 		const s3Data = await s3.send(getObjectCommand);
@@ -37,7 +38,7 @@ export const handler = async (event) => {
 
 		// Put object
 		const putObjectCommand = new PutObjectCommand({
-			Bucket: "busy-analytics-server",
+			Bucket: "aim-project-server",
 			Key: "data/pendingListing.json",
 			Body: JSON.stringify(currentList, null, 2),
 			ContentType: "application/json",
@@ -65,4 +66,4 @@ export const handler = async (event) => {
 	}
 };
 
-// # zip -r lamda-newListing.zip . && aws s3 cp lamda-newListing.zip s3://busy-analytics-server/scripts/lamda-newListing.zip
+// # zip -r lambda-newListing.zip . && aws s3 cp lambda-newListing.zip s3://aim-project-server/scripts/lambda-newListing.zip

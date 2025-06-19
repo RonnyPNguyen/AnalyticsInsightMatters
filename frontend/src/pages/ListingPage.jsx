@@ -226,10 +226,10 @@ const ListingPage = () => {
 const serverLoader = async ({ params }) => {
 	const { id } = params;
 	const listingsResponse = await fetch(
-		`https://busy-analytics-server.s3.us-east-1.amazonaws.com/data/listingsData.json`
+		`https://aim-project-server.s3.ap-southeast-2.amazonaws.com/data/listingsData.json`
 	);
 	const marketResponse = await fetch(
-		`https://busy-analytics-server.s3.us-east-1.amazonaws.com/data/marketData.json`
+		`https://aim-project-server.s3.ap-southeast-2.amazonaws.com/data/marketData.json`
 	);
 	const listings = await listingsResponse.json();
 	const listing = listings.find((item) => item.id === id);

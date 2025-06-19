@@ -10,10 +10,10 @@ const FeaturedCards = ({ numberOfFeatured = 4 }) => {
 			try {
 				const [listingsRes, marketRes] = await Promise.all([
 					fetch(
-						"https://busy-analytics-server.s3.us-east-1.amazonaws.com/data/listingsData.json"
+						"https://aim-project-server.s3.ap-southeast-2.amazonaws.com/data/listingsData.json"
 					),
 					fetch(
-						"https://busy-analytics-server.s3.us-east-1.amazonaws.com/data/marketData.json"
+						"https://aim-project-server.s3.ap-southeast-2.amazonaws.com/data/marketData.json"
 					),
 				]);
 				const listingsJson = await listingsRes.json();
